@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portafolioPage/static/css/main.cb6610b7.chunk.css",
-    "main.js": "/portafolioPage/static/js/main.84f95a12.chunk.js",
-    "main.js.map": "/portafolioPage/static/js/main.84f95a12.chunk.js.map",
+    "main.js": "/portafolioPage/static/js/main.3c50d216.chunk.js",
+    "main.js.map": "/portafolioPage/static/js/main.3c50d216.chunk.js.map",
     "runtime-main.js": "/portafolioPage/static/js/runtime-main.05e7e370.js",
     "runtime-main.js.map": "/portafolioPage/static/js/runtime-main.05e7e370.js.map",
     "static/js/2.9434858f.chunk.js": "/portafolioPage/static/js/2.9434858f.chunk.js",
@@ -14,8 +14,6 @@
     "static/media/Cv_Juan_Morales.62557e03.pdf": "/portafolioPage/static/media/Cv_Juan_Morales.62557e03.pdf",
     "static/media/Error404.56b5ac10.jpg": "/portafolioPage/static/media/Error404.56b5ac10.jpg",
     "static/media/avocado-app.b1b01f83.png": "/portafolioPage/static/media/avocado-app.b1b01f83.png",
-    "static/media/batatabit-baner.6afdb82c.png": "/portafolioPage/static/media/batatabit-baner.6afdb82c.png",
-    "static/media/batatabit-def.a15ec6fd.jpg": "/portafolioPage/static/media/batatabit-def.a15ec6fd.jpg",
     "static/media/bootstrap-5-1.98585727.svg": "/portafolioPage/static/media/bootstrap-5-1.98585727.svg",
     "static/media/css-logo.efd17a83.png": "/portafolioPage/static/media/css-logo.efd17a83.png",
     "static/media/datasheet-baner.dcc28275.jpg": "/portafolioPage/static/media/datasheet-baner.dcc28275.jpg",
@@ -27,6 +25,8 @@
     "static/media/gif_mini.8554dd66.png": "/portafolioPage/static/media/gif_mini.8554dd66.png",
     "static/media/git-logo2.430db756.png": "/portafolioPage/static/media/git-logo2.430db756.png",
     "static/media/graphql.c0d2b1e1.svg": "/portafolioPage/static/media/graphql.c0d2b1e1.svg",
+    "static/media/heroes_banner.63659e13.png": "/portafolioPage/static/media/heroes_banner.63659e13.png",
+    "static/media/heroes_mini.e451dd11.png": "/portafolioPage/static/media/heroes_mini.e451dd11.png",
     "static/media/javascript-logo-svg-vector.9abe85eb.svg": "/portafolioPage/static/media/javascript-logo-svg-vector.9abe85eb.svg",
     "static/media/kanban.521b0619.png": "/portafolioPage/static/media/kanban.521b0619.png",
     "static/media/material-ui-1.fd510ed8.svg": "/portafolioPage/static/media/material-ui-1.fd510ed8.svg",
@@ -56,6 +56,6 @@
     "static/js/runtime-main.05e7e370.js",
     "static/js/2.9434858f.chunk.js",
     "static/css/main.cb6610b7.chunk.css",
-    "static/js/main.84f95a12.chunk.js"
+    "static/js/main.3c50d216.chunk.js"
   ]
 }
