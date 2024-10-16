@@ -3,7 +3,7 @@ import Modal from "./Modal";
 import "./styles/Modal.css";
 import { useModal } from "./useModal";
 import ModalElement from "./modals/ModalElement";
-import Modal01 from "../assets/image/screenshot/batatabit-def.jpg";
+import Modal01 from "../assets/image/screenshot/heroes_mini.png";
 import Proyect01 from "./modals/Proyect01";
 import Modal02 from "../assets/image/screenshot/spacebadges-def.jpg";
 import Proyect02 from "./modals/Proyect02";
@@ -76,7 +76,19 @@ const Modals = () => {
         imgTitle="Buscador de gifs"
         imgDesc="SPA buscadora de gifs creada con React y Tailwind"
       />
-{/*
+      <Modal isOpen={isOpenModal12} closeModal={closeModal12}>
+        <Proyect12 />
+      </Modal>
+      <ModalElement
+        image={Modal01}
+        e={openModal1}
+        imgTitle="Catálogo de superhéroes"
+        imgDesc="SPA de Superhéroes creada con React"
+      />
+      <Modal isOpen={isOpenModal1} closeModal={closeModal1}>
+        <Proyect01 />
+      </Modal>
+      {/*
       <Modal isOpen={isOpenModal12} closeModal={closeModal12}>
         <Proyect12 />
       </Modal>
