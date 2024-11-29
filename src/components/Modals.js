@@ -19,7 +19,7 @@ import Modal07 from "../assets/image/screenshot/food-app.jpg";
 import Proyect07 from "./modals/Proyect07";
 import Modal08 from "../assets/image/screenshot/memo_mini.png";
 import Proyect08 from "./modals/Proyect08";
-import Modal09 from "../assets/image/screenshot/kanban_mini.png";
+import Modal09 from "../assets/image/screenshot/kanban_mini2.png";
 import Proyect09 from "./modals/Proyect09";
 import Modal10 from "../assets/image/screenshot/avocado-app.png";
 import Proyect10 from "./modals/Proyect10";

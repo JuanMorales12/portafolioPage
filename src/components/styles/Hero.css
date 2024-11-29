@@ -2,11 +2,10 @@
   --hover-gray: #818081;
 }
 
+/* Existing styles remain the same */
 .hero--logo {
   width: 75px;
   height: 75px;
-  /* border: solid 2px white; */
-  /* border-radius: 100% */
 }
 
 .white-logo {
@@ -20,8 +19,23 @@
   background-repeat: repeat;
 }
 
+/* Updated links and content styles for better alignment */
+.s-hero__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .links {
-  display: grid;
+  display: flex; /* Cambiamos a flex para mejor control */
+  gap: 1rem;
+  width: fit-content; /* Ajusta el ancho al contenido */
+  margin-top: 2rem;
+  align-self: center; /* Alinea con el contenido superior */
 }
 
 .s-hero span {
@@ -29,11 +43,117 @@
 }
 
 .btn-hero {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0.8rem 1.5rem;
   border: none;
+  white-space: nowrap; /* Evita que el texto se rompa */
 }
 
 .btn-hero:hover {
   background-color: var(--hover-gray);
+}
+
+.s-hero__content-about {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alinea el contenido a la izquierda */
+}
+
+.profile-container {
+  flex: 0 0 10px;
+  margin-left: 2rem;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Updated responsive styles */
+@media (max-width: 768px) {
+  .s-hero__content {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .profile-container {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+  .s-hero__content-about {
+    align-items: center; /* Centra el contenido en móvil */
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+
+  .links {
+    margin: 2rem auto; /* Centra los botones en móvil */
+    justify-content: center;
+  }
+}
+
+@media (max-width: 385px) {
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .links {
+    flex-direction: column; /* Apila los botones en pantallas muy pequeñas */
+    align-items: center;
+  }
+}
+
+
+/* Add these new styles to your existing Hero.css file */
+
+.flag-container {
+  width: 100%;
+  max-width: 75px;
+  margin: 0 auto 1rem auto;
+  position: relative;
+}
+
+.argentina-flag {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+}
+
+/* Update existing profile container styles */
+.profile-container {
+  flex: 0 0 auto;
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .flag-container {
+    max-width: 100px;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 385px) {
+  .flag-container {
+    max-width: 80px;
+  }
 }
