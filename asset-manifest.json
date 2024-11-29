@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/portafolioPage/static/css/main.cb6610b7.chunk.css",
-    "main.js": "/portafolioPage/static/js/main.3c50d216.chunk.js",
-    "main.js.map": "/portafolioPage/static/js/main.3c50d216.chunk.js.map",
+    "main.css": "/portafolioPage/static/css/main.2dfb48f0.chunk.css",
+    "main.js": "/portafolioPage/static/js/main.67fed7df.chunk.js",
+    "main.js.map": "/portafolioPage/static/js/main.67fed7df.chunk.js.map",
     "runtime-main.js": "/portafolioPage/static/js/runtime-main.05e7e370.js",
     "runtime-main.js.map": "/portafolioPage/static/js/runtime-main.05e7e370.js.map",
     "static/js/2.9434858f.chunk.js": "/portafolioPage/static/js/2.9434858f.chunk.js",
     "static/js/2.9434858f.chunk.js.map": "/portafolioPage/static/js/2.9434858f.chunk.js.map",
     "index.html": "/portafolioPage/index.html",
-    "static/css/main.cb6610b7.chunk.css.map": "/portafolioPage/static/css/main.cb6610b7.chunk.css.map",
+    "static/css/main.2dfb48f0.chunk.css.map": "/portafolioPage/static/css/main.2dfb48f0.chunk.css.map",
     "static/js/2.9434858f.chunk.js.LICENSE.txt": "/portafolioPage/static/js/2.9434858f.chunk.js.LICENSE.txt",
     "static/media/1220365_whatsapp_chat_communication_message_phone_icon.1387d5cc.png": "/portafolioPage/static/media/1220365_whatsapp_chat_communication_message_phone_icon.1387d5cc.png",
     "static/media/Cv_Juan_Morales.62557e03.pdf": "/portafolioPage/static/media/Cv_Juan_Morales.62557e03.pdf",
@@ -19,20 +19,22 @@
     "static/media/datasheet-baner.dcc28275.jpg": "/portafolioPage/static/media/datasheet-baner.dcc28275.jpg",
     "static/media/datasheet.1e76b60d.jpg": "/portafolioPage/static/media/datasheet.1e76b60d.jpg",
     "static/media/ecommerce.19d41058.png": "/portafolioPage/static/media/ecommerce.19d41058.png",
+    "static/media/ecommerce_mini.7b204c3d.png": "/portafolioPage/static/media/ecommerce_mini.7b204c3d.png",
     "static/media/figma-1-logo-svg-vector.272540cc.svg": "/portafolioPage/static/media/figma-1-logo-svg-vector.272540cc.svg",
     "static/media/food-app.cef515c4.jpg": "/portafolioPage/static/media/food-app.cef515c4.jpg",
     "static/media/gif_completa.5f56f74b.png": "/portafolioPage/static/media/gif_completa.5f56f74b.png",
-    "static/media/gif_mini.8554dd66.png": "/portafolioPage/static/media/gif_mini.8554dd66.png",
+    "static/media/gif_mini.2299caba.png": "/portafolioPage/static/media/gif_mini.2299caba.png",
     "static/media/git-logo2.430db756.png": "/portafolioPage/static/media/git-logo2.430db756.png",
     "static/media/graphql.c0d2b1e1.svg": "/portafolioPage/static/media/graphql.c0d2b1e1.svg",
     "static/media/heroes_banner.63659e13.png": "/portafolioPage/static/media/heroes_banner.63659e13.png",
     "static/media/heroes_mini.e451dd11.png": "/portafolioPage/static/media/heroes_mini.e451dd11.png",
     "static/media/javascript-logo-svg-vector.9abe85eb.svg": "/portafolioPage/static/media/javascript-logo-svg-vector.9abe85eb.svg",
     "static/media/kanban.521b0619.png": "/portafolioPage/static/media/kanban.521b0619.png",
+    "static/media/kanban_mini2.dc608da1.png": "/portafolioPage/static/media/kanban_mini2.dc608da1.png",
     "static/media/material-ui-1.fd510ed8.svg": "/portafolioPage/static/media/material-ui-1.fd510ed8.svg",
     "static/media/memo-app-def.20cb964c.jpg": "/portafolioPage/static/media/memo-app-def.20cb964c.jpg",
     "static/media/memo.f76858bd.png": "/portafolioPage/static/media/memo.f76858bd.png",
-    "static/media/memo_mini.5d6d9420.png": "/portafolioPage/static/media/memo_mini.5d6d9420.png",
+    "static/media/memo_mini.b6c19125.png": "/portafolioPage/static/media/memo_mini.b6c19125.png",
     "static/media/memoapp-baner.7531e6a5.jpg": "/portafolioPage/static/media/memoapp-baner.7531e6a5.jpg",
     "static/media/mongo.2a1528dd.png": "/portafolioPage/static/media/mongo.2a1528dd.png",
     "static/media/nestjs.f0bfea90.svg": "/portafolioPage/static/media/nestjs.f0bfea90.svg",
@@ -55,7 +57,7 @@
   "entrypoints": [
     "static/js/runtime-main.05e7e370.js",
     "static/js/2.9434858f.chunk.js",
-    "static/css/main.cb6610b7.chunk.css",
-    "static/js/main.3c50d216.chunk.js"
+    "static/css/main.2dfb48f0.chunk.css",
+    "static/js/main.67fed7df.chunk.js"
   ]
 }
