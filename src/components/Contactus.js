@@ -11,7 +11,7 @@ import torreStiker from "../assets/image/logo-torre-invertido.png";
 import ContactNetwork from "./ContactNetwork";
 const cellPhone =
   "https://api.whatsapp.com/send/?phone=541164464754&text&app_absent=0";
-const githubLink = "https://github.com/dbriceno10";
+const githubLink = "https://github.com/JuanMorales12";
 const linkedinLink = "https://www.linkedin.com/in/juansfff/";
 
 const Contactus = () => {
