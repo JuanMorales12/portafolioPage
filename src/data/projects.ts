@@ -1,6 +1,7 @@
 import type { Project } from '../types'
 
 // Import project images
+import mernEvidence from '@assets/image/mern_evidence.png'
 import heroesBanner from '@assets/image/screenshot/heroes_banner.png'
 import spacebadgesBanner from '@assets/image/screenshot/spacebadges-baner3.png'
 import productappBanner from '@assets/image/screenshot/productapp-baner.png'
@@ -15,6 +16,15 @@ import ecommerceImage from '@assets/image/screenshot/ecommerce.png'
 import gifImage from '@assets/image/screenshot/gif_completa.png'
 
 export const projects: Project[] = [
+  {
+    id: 'mern-app',
+    title: 'MERN App',
+    description: 'Aplicación full-stack construida con el stack MERN (MongoDB, Express, React, Node.js)',
+    technologies: 'Tecnologías utilizadas: MongoDB, Express, React JS, Node JS, JavaScript, Git/Github',
+    image: mernEvidence,
+    pageUrl: 'https://github.com/JuanMorales12/mern_app',
+    repoUrl: 'https://github.com/JuanMorales12/mern_app',
+  },
   {
     id: 'kanban',
     title: 'Kanban - To do',
