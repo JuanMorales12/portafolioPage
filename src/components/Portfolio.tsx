@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useScrollToTop } from '@hooks/useScrollToTop'
+import { useLanguage } from '../contexts/LanguageContext'
 import Modal from './Modal'
 import ProjectCard from './ProjectCard'
 import ProjectDetail from './ProjectDetail'
@@ -7,6 +8,7 @@ import { projects } from '@/data/projects'
 
 const Portfolio = () => {
   useScrollToTop()
+  const { t } = useLanguage()
   const [selectedProject, setSelectedProject] = useState<string | null>(null)
 
   const currentProject = projects.find(p => p.id === selectedProject)
@@ -16,7 +18,7 @@ const Portfolio = () => {
       <div className="container mx-auto px-6">
         <div className="mb-12">
           <h3 className="text-4xl md:text-5xl font-bold text-dark text-center">
-            Mis últimos proyectos
+            {t.portfolio.title}
           </h3>
         </div>
 

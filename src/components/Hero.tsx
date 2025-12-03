@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useScrollToTop } from '@hooks/useScrollToTop'
+import { useLanguage } from '../contexts/LanguageContext'
 import HeroSocial from './HeroSocial'
 import ArgentinaFlag from './ArgentinaFlag'
 import linkedinLogo from '@assets/image/linkedin.png'
@@ -8,6 +9,7 @@ import userPhoto from '@assets/image/personal.jpg'
 
 const Hero = () => {
   useScrollToTop()
+  const { t } = useLanguage()
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-20">
@@ -20,15 +22,15 @@ const Hero = () => {
           <div className="flex-1 text-center lg:text-left space-y-6 animate-fade-in">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-light">
-                Juan Morales
+                {t.hero.name}
               </span>
             </h1>
 
             <h3 className="text-xl md:text-2xl text-gray-300 leading-relaxed">
-              Full Stack Web Developer
+              {t.hero.title}
               <br />
               <span className="text-gray-400">
-                JavaScript | React JS | Node | Redux | PostgreSQL | MongoDB | SCRUM
+                {t.hero.subtitle}
               </span>
             </h3>
 
@@ -54,13 +56,13 @@ const Hero = () => {
                 to="/contact"
                 className="px-8 py-3 bg-gradient-to-r from-primary to-primary-light text-white font-medium rounded-lg hover:scale-105 transform transition-all duration-200 shadow-lg hover:shadow-primary/50"
               >
-                Contáctame
+                {t.hero.contactButton}
               </Link>
               <Link
                 to="/portfolio"
                 className="px-8 py-3 bg-secondary/20 backdrop-blur-sm text-white font-medium rounded-lg border-2 border-secondary hover:bg-secondary hover:scale-105 transform transition-all duration-200"
               >
-                Proyectos
+                {t.hero.projectsButton}
               </Link>
             </div>
           </div>

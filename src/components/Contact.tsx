@@ -1,6 +1,7 @@
 import { useState, type FormEvent, type ChangeEvent } from 'react'
 import Swal from 'sweetalert2'
 import { useScrollToTop } from '@hooks/useScrollToTop'
+import { useLanguage } from '../contexts/LanguageContext'
 import { validateForm } from '@utils/validation'
 import type { FormData, ValidationErrors } from '../types'
 import ContactNetwork from './ContactNetwork'
@@ -11,6 +12,7 @@ import emailIcon from '@assets/image/email (1).png'
 
 const Contact = () => {
   useScrollToTop()
+  const { t } = useLanguage()
 
   const [formData, setFormData] = useState<FormData>({
     fullname: '',
@@ -36,8 +38,8 @@ const Contact = () => {
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors)
       Swal.fire({
-        title: 'Error',
-        text: 'Debe completar el formulario correctamente antes de enviarlo.',
+        title: t.contact.error.title,
+        text: t.contact.error.text,
         icon: 'error',
         confirmButtonColor: '#11ABB0',
       })
@@ -57,8 +59,8 @@ const Contact = () => {
 
       if (response.ok) {
         await Swal.fire({
-          title: 'Formulario Enviado',
-          text: 'Gracias por tus comentarios, me comunicaré con usted en la brevedad posible.',
+          title: t.contact.success.title,
+          text: t.contact.success.text,
           icon: 'success',
           confirmButtonColor: '#11ABB0',
         })
@@ -68,8 +70,8 @@ const Contact = () => {
       }
     } catch (error) {
       Swal.fire({
-        title: 'Error',
-        text: 'Ha ocurrido un error inesperado, por favor intenta nuevamente.',
+        title: t.contact.error.title,
+        text: t.contact.error.text,
         icon: 'error',
         confirmButtonColor: '#F06000',
       })
@@ -83,10 +85,10 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-5xl font-bold text-white text-center mb-4">
-            Contáctame
+            {t.contact.title}
           </h2>
           <p className="text-gray-400 text-center mb-12">
-            ¿Tienes un proyecto en mente? ¡Hablemos!
+            {t.contact.subtitle}
           </p>
 
           {/* Social Networks */}
@@ -125,7 +127,7 @@ const Contact = () => {
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
                 <label htmlFor="fullname" className="block text-sm font-medium text-gray-300 mb-2">
-                  Nombre Completo *
+                  {t.contact.form.name} *
                 </label>
                 <input
                   type="text"
@@ -136,7 +138,7 @@ const Contact = () => {
                   className={`w-full px-4 py-3 bg-dark border ${
                     errors.fullname ? 'border-red-500' : 'border-gray-700'
                   } rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary transition-colors`}
-                  placeholder="Tu nombre completo"
+                  placeholder={t.contact.form.namePlaceholder}
                 />
                 {errors.fullname && (
                   <p className="text-red-500 text-sm mt-1">{errors.fullname}</p>
@@ -145,7 +147,7 @@ const Contact = () => {
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                  Email *
+                  {t.contact.form.email} *
                 </label>
                 <input
                   type="email"
@@ -156,7 +158,7 @@ const Contact = () => {
                   className={`w-full px-4 py-3 bg-dark border ${
                     errors.email ? 'border-red-500' : 'border-gray-700'
                   } rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary transition-colors`}
-                  placeholder="tu@email.com"
+                  placeholder={t.contact.form.emailPlaceholder}
                 />
                 {errors.email && (
                   <p className="text-red-500 text-sm mt-1">{errors.email}</p>
@@ -166,7 +168,7 @@ const Contact = () => {
 
             <div className="mb-6">
               <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                Mensaje
+                {t.contact.form.message}
               </label>
               <textarea
                 id="message"
@@ -176,7 +178,7 @@ const Contact = () => {
                 rows={6}
                 maxLength={5000}
                 className="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary resize-none transition-colors"
-                placeholder="Cuéntame sobre tu proyecto..."
+                placeholder={t.contact.form.messagePlaceholder}
               />
             </div>
 
@@ -185,7 +187,7 @@ const Contact = () => {
               disabled={isSubmitting}
               className="w-full py-4 bg-gradient-to-r from-primary to-primary-light text-white font-bold rounded-lg hover:scale-105 transform transition-all duration-200 shadow-lg hover:shadow-primary/50 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
             >
-              {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
+              {isSubmitting ? t.contact.form.sending : t.contact.form.send}
             </button>
           </form>
         </div>

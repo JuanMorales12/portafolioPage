@@ -1,3 +1,4 @@
+import { useLanguage } from '../contexts/LanguageContext'
 import type { ProjectDetailProps } from '../types'
 
 const ProjectDetail = ({
@@ -7,8 +8,10 @@ const ProjectDetail = ({
   tecn,
   urlPage,
   urlRepo,
-  btnPage = 'Visit Page'
+  btnPage
 }: ProjectDetailProps) => {
+  const { t } = useLanguage()
+
   return (
     <div className="p-8">
       <div className="mb-6">
@@ -37,7 +40,7 @@ const ProjectDetail = ({
             rel="noopener noreferrer"
             className="px-6 py-3 bg-primary hover:bg-primary-light text-white font-medium rounded-lg transition-colors"
           >
-            {btnPage}
+            {btnPage || t.portfolio.visitPage}
           </a>
           <a
             href={urlRepo}
@@ -45,7 +48,7 @@ const ProjectDetail = ({
             rel="noopener noreferrer"
             className="px-6 py-3 bg-secondary hover:bg-secondary-light text-white font-medium rounded-lg transition-colors"
           >
-            View Code
+            {t.portfolio.viewCode}
           </a>
         </div>
       </div>
