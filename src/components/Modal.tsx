@@ -21,12 +21,12 @@ const Modal = ({ children, isOpen, closeModal }: ModalProps) => {
       onClick={closeModal}
     >
       <div
-        className="relative w-full max-w-4xl bg-dark-lighter rounded-2xl shadow-2xl overflow-hidden animate-scale-in max-h-[90vh] overflow-y-auto scrollbar-hide"
+        className="relative w-full max-w-4xl bg-white dark:bg-dark-lighter rounded-2xl shadow-2xl overflow-hidden animate-scale-in max-h-[90vh] overflow-y-auto scrollbar-hide transition-colors duration-300"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={closeModal}
-          className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+          className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 dark:bg-black/50 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-black/70 transition-colors"
           aria-label="Cerrar modal"
         >
           <span className="text-2xl">×</span>

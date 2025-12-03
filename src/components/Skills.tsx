@@ -22,9 +22,9 @@ import graphqlSticker from '@assets/image/graphql.svg'
 
 const Skills = () => {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white dark:bg-dark-lighter py-24 transition-colors duration-300">
       <div className="container mx-auto px-6">
-        <h3 className="text-4xl font-bold text-dark text-center mb-16">
+        <h3 className="text-4xl font-bold text-gray-900 dark:text-white text-center mb-16 transition-colors duration-300">
           Skills
         </h3>
 

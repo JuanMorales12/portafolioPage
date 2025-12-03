@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-primary: #11ABB0;
   --color-primary-light: #3DC3C7;
@@ -18,11 +20,19 @@
   --font-family-sans: 'Roboto', sans-serif;
 }
 
+/* Body styles - Light mode by default */
 body {
-  background-color: var(--color-dark);
   font-family: var(--font-family-sans);
-  color: rgb(243 244 246);
   margin: 0;
+  background-color: #f3f4f6;
+  color: #1f2937;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode override */
+.dark body {
+  background-color: var(--color-dark);
+  color: rgb(243 244 246);
 }
 
 * {

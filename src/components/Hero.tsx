@@ -12,9 +12,9 @@ const Hero = () => {
   const { t } = useLanguage()
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 dark:from-dark dark:to-dark pt-20 transition-colors duration-300">
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 dark:from-primary/10 dark:via-transparent dark:to-secondary/10" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
@@ -26,7 +26,7 @@ const Hero = () => {
               </span>
             </h1>
 
-            <h3 className="text-xl md:text-2xl text-gray-300 leading-relaxed">
+            <h3 className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 leading-relaxed transition-colors duration-300">
               {t.hero.title}
               <br />
               <span className="text-gray-400">

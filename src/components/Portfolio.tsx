@@ -14,10 +14,10 @@ const Portfolio = () => {
   const currentProject = projects.find(p => p.id === selectedProject)
 
   return (
-    <section className="min-h-screen bg-white py-24 pt-32">
+    <section className="min-h-screen bg-white dark:bg-dark py-24 pt-32 transition-colors duration-300">
       <div className="container mx-auto px-6">
         <div className="mb-12">
-          <h3 className="text-4xl md:text-5xl font-bold text-dark text-center">
+          <h3 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white text-center transition-colors duration-300">
             {t.portfolio.title}
           </h3>
         </div>

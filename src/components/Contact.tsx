@@ -81,13 +81,13 @@ const Contact = () => {
   }
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-dark via-dark-lighter to-dark py-24 pt-32">
+    <section className="min-h-screen bg-gray-50 dark:bg-linear-to-br dark:from-dark dark:via-dark-lighter dark:to-dark py-24 pt-32 transition-colors duration-300">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-5xl font-bold text-white text-center mb-4">
+          <h2 className="text-5xl font-bold text-gray-900 dark:text-white text-center mb-4 transition-colors duration-300">
             {t.contact.title}
           </h2>
-          <p className="text-gray-400 text-center mb-12">
+          <p className="text-gray-600 dark:text-gray-400 text-center mb-12 transition-colors duration-300">
             {t.contact.subtitle}
           </p>
 
@@ -122,11 +122,11 @@ const Contact = () => {
           {/* Contact Form */}
           <form
             onSubmit={handleSubmit}
-            className="bg-dark-lighter/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-800 shadow-2xl"
+            className="bg-white dark:bg-dark-lighter/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-2xl transition-colors duration-300"
           >
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
-                <label htmlFor="fullname" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="fullname" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 transition-colors duration-300">
                   {t.contact.form.name} *
                 </label>
                 <input
@@ -135,9 +135,9 @@ const Contact = () => {
                   name="fullname"
                   value={formData.fullname}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 bg-dark border ${
-                    errors.fullname ? 'border-red-500' : 'border-gray-700'
-                  } rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary transition-colors`}
+                  className={`w-full px-4 py-3 bg-gray-50 dark:bg-dark border ${
+                    errors.fullname ? 'border-red-500' : 'border-gray-300 dark:border-gray-700'
+                  } rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary transition-colors duration-300`}
                   placeholder={t.contact.form.namePlaceholder}
                 />
                 {errors.fullname && (
@@ -146,7 +146,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 transition-colors duration-300">
                   {t.contact.form.email} *
                 </label>
                 <input
@@ -155,9 +155,9 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 bg-dark border ${
-                    errors.email ? 'border-red-500' : 'border-gray-700'
-                  } rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary transition-colors`}
+                  className={`w-full px-4 py-3 bg-gray-50 dark:bg-dark border ${
+                    errors.email ? 'border-red-500' : 'border-gray-300 dark:border-gray-700'
+                  } rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary transition-colors duration-300`}
                   placeholder={t.contact.form.emailPlaceholder}
                 />
                 {errors.email && (
@@ -167,7 +167,7 @@ const Contact = () => {
             </div>
 
             <div className="mb-6">
-              <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 transition-colors duration-300">
                 {t.contact.form.message}
               </label>
               <textarea
@@ -177,7 +177,7 @@ const Contact = () => {
                 onChange={handleChange}
                 rows={6}
                 maxLength={5000}
-                className="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary resize-none transition-colors"
+                className="w-full px-4 py-3 bg-gray-50 dark:bg-dark border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary resize-none transition-colors duration-300"
                 placeholder={t.contact.form.messagePlaceholder}
               />
             </div>

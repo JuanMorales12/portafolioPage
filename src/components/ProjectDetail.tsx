@@ -23,13 +23,13 @@ const ProjectDetail = ({
       </div>
 
       <div className="space-y-4">
-        <h2 className="text-3xl font-bold text-white">{projectTitle}</h2>
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300">{projectTitle}</h2>
 
-        <p className="text-gray-300 leading-relaxed">
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed transition-colors duration-300">
           {projectDesc}
         </p>
 
-        <p className="text-sm text-gray-400">
+        <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors duration-300">
           {tecn}
         </p>
 

@@ -3,7 +3,7 @@ import type { ProjectCardProps } from '../types'
 const ProjectCard = ({ image, title, description, onClick }: ProjectCardProps) => {
   return (
     <div
-      className="group relative overflow-hidden rounded-xl bg-dark-lighter cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20"
+      className="group relative overflow-hidden rounded-xl bg-gray-100 dark:bg-dark-lighter cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20"
       onClick={onClick}
     >
       <div className="aspect-video overflow-hidden">
@@ -28,8 +28,8 @@ const ProjectCard = ({ image, title, description, onClick }: ProjectCardProps) =
       </div>
 
       <div className="p-4">
-        <h6 className="font-semibold text-lg text-white mb-1">{title}</h6>
-        <p className="text-sm text-gray-400 line-clamp-2">{description}</p>
+        <h6 className="font-semibold text-lg text-gray-900 dark:text-white mb-1 transition-colors duration-300">{title}</h6>
+        <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2 transition-colors duration-300">{description}</p>
       </div>
     </div>
   )
