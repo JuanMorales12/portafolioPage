@@ -2,6 +2,7 @@ import type { Project } from '../types'
 
 // Import project images
 import mernEvidence from '@assets/image/mern_evidence.png'
+import animationsImage from '@assets/image/screenshot/animations.png'
 import heroesBanner from '@assets/image/screenshot/heroes_banner.png'
 import spacebadgesBanner from '@assets/image/screenshot/spacebadges-baner3.png'
 import productappBanner from '@assets/image/screenshot/productapp-baner.png'
@@ -33,6 +34,15 @@ export const projects: Project[] = [
     image: kanbanImage,
     pageUrl: 'https://juanmorales12.github.io/Kanban/',
     repoUrl: 'https://github.com/JuanMorales12/Kanban',
+  },
+  {
+    id: 'animations',
+    title: 'Based Animations',
+    description: 'Proyecto de animaciones web interactivas con Framer Motion y GSAP',
+    technologies: 'Tecnologías utilizadas: React 18, TypeScript, Vite, Framer Motion, GSAP, CSS3, Git/Github',
+    image: animationsImage,
+    pageUrl: 'https://basedanimationsjuan.vercel.app/',
+    repoUrl: 'https://github.com/JuanMorales12/based_animations_juan',
   },
   {
     id: 'ecommerce',
