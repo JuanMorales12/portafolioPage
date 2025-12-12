@@ -6,6 +6,7 @@ import kanbanImage from '@assets/image/screenshot/kanban.png'
 import animationsImage from '@assets/image/screenshot/animations.png'
 import angularTableImage from '@assets/image/screenshot/angular-project.png'
 import ecommerceImage from '@assets/image/screenshot/ecommerce.png'
+import lootBoxImage from '@assets/image/screenshot/loot-box.png'
 
 // Import project images - Commented projects
 // import heroesBanner from '@assets/image/screenshot/heroes_banner.png'
@@ -64,6 +65,15 @@ export const projects: Project[] = [
     image: ecommerceImage,
     pageUrl: 'https://tienda-gz.netlify.app/',
     repoUrl: 'https://github.com/JuanMorales12/CoderH_MoralesJuan',
+  },
+  {
+    id: 'loot-box',
+    title: 'Loot Box',
+    description: 'Sistema interactivo de cajas de recompensas con animaciones dinámicas y gestión de inventario',
+    technologies: 'Tecnologías utilizadas: Next.js, Framer Motion, Tailwind CSS, Zustand, Lucide React, Git/Github',
+    image: lootBoxImage,
+    pageUrl: 'https://loot-box.vercel.app/',
+    repoUrl: 'https://github.com/JuanMorales12/loot-box',
   },
   // {
   //   id: 'gif-search',
