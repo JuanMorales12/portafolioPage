@@ -22,13 +22,8 @@ import graphqlSticker from '@assets/image/graphql.svg'
 
 const Skills = () => {
   return (
-    <section className="bg-white dark:bg-dark-lighter py-24 transition-colors duration-300">
-      <div className="container mx-auto px-6">
-        <h3 className="text-4xl font-bold text-gray-900 dark:text-white text-center mb-16 transition-colors duration-300">
-          Skills
-        </h3>
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
+    <div className="container mx-auto px-6">
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-6">
           <Skill skill="HTML" src={htmlSticker} title="HTML" alt="HTML logo" />
           <Skill skill="CSS" src={cssSticker} title="CSS" alt="CSS logo" />
           <Skill skill="JavaScript" src={jsSticker} title="JavaScript" alt="JavaScript logo" />
@@ -49,9 +44,8 @@ const Skills = () => {
           <Skill skill="Material UI" src={materialSticker} title="Material-UI" alt="Material UI logo" />
           <Skill skill="Git" src={gitSticker} title="Git" alt="Git logo" />
           <Skill skill="Figma" src={figmaSticker} title="Figma" alt="Figma logo" />
-        </div>
       </div>
-    </section>
+    </div>
   )
 }
 

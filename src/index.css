@@ -20,6 +20,10 @@
   --font-family-sans: 'Roboto', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Body styles - Light mode by default */
 body {
   font-family: var(--font-family-sans);

@@ -1,18 +1,25 @@
+import type { Translations } from '../i18n/translations'
+
 export const validateEmail = (value: string): boolean => {
   return /\S+@\S+\.\S+/.test(value)
 }
 
-export const validateForm = (data: { fullname: string; email: string; message?: string }): Record<string, string> => {
+export const validateForm = (
+  data: { fullname: string; email: string; message?: string },
+  t: Translations
+): Record<string, string> => {
   const errors: Record<string, string> = {}
 
   if (!data.fullname.trim()) {
-    errors.fullname = 'El nombre completo es requerido'
+    errors.fullname = t.contact.validation.nameRequired
+  } else if (data.fullname.trim().length < 3) {
+    errors.fullname = t.contact.validation.nameMin
   }
 
   if (!data.email.trim()) {
-    errors.email = 'El email es requerido'
+    errors.email = t.contact.validation.emailRequired
   } else if (!validateEmail(data.email)) {
-    errors.email = 'El email no es válido'
+    errors.email = t.contact.validation.emailInvalid
   }
 
   return errors

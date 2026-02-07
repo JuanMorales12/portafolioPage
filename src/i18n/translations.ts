@@ -1,61 +1,100 @@
 export const translations = {
   es: {
-    // Header/Navigation
     nav: {
       home: 'Inicio',
-      about: 'Sobre Mí',
+      services: 'Servicios',
       portfolio: 'Portafolio',
       contact: 'Contacto',
     },
-    // Hero Section
     hero: {
       name: 'Juan Morales',
-      title: 'Full Stack Web Developer',
-      subtitle: 'JavaScript | React JS | Node | Redux | PostgreSQL | MongoDB | SCRUM',
-      contactButton: 'Contáctame',
-      projectsButton: 'Proyectos',
+      title: 'Construyo Aplicaciones Web Que Resuelven Problemas Reales',
+      subtitle: '+2 años de experiencia creando soluciones con React & Node.js para clientes en todo el mundo',
+      availableBadge: 'Disponible para contratar',
+      contactButton: 'Hablemos de tu proyecto',
+      projectsButton: 'Ver Proyectos',
     },
-    // About Section
-    about: {
-      title: 'Sobre Mí',
-      intro: 'Hola, mi nombre es Juan Morales, Full Stack Developer.',
-      paragraph1: 'Soy un apasionado desarrollador full stack con más de 2 años de experiencia profesional. He tenido la oportunidad de trabajar en proyectos de mediano y largo alcance, implementando clientes con React y React Native, además de trabajar en el lado del servidor implementando APIs y trabajando bajo la arquitectura de micro servicios. Siempre prestando especial atención a los detalles, trabajando bajo principios SOLID y arquitecturas como hexagonal y MCV para garantizar un código limpio y mantenible.',
-      paragraph2: 'La comunicación y el trabajo en equipo es para mí esencial para poder crecer como desarrollador. Soy proactivo y metódico, siempre busco nuevos retos y me adapto fácilmente a los cambios, estoy abierto a aprender nuevas tecnologías y lenguajes.',
-      techLabel: 'Tecnologías:',
-      techList: 'HTML, CSS, JavaScript, React JS/React Native, Next JS, Redux JS, TypeScript, Bootstrap, Less, Node JS, Nest JS, Express, SQL, PostgreSQL, Sequelize, MongoDB, Mongoose, JsonWebToken, Figma, Git.',
-      whatCanIDo: '¿Qué puedo hacer?',
-      frontendTitle: 'Front-End',
-      frontendText: 'Como desarrollador frontend, tengo experiencia en el manejo de HTML y CSS, además del manejo de frameworks y liberías, especialmente React JS y React Native. He trabajado en proyectos de escala mediana y grandes, implementando soluciones de código eficientes, trabajado con arquitecturas de software escalables y fácilmente mantenibles.',
-      backendTitle: 'Back-End',
-      backendText: 'Utilizando Express y Node, puedo crear rutas para APIs REST, protegerlas e implementar bases de datos SQL y NoSQL como PostgreSQL y MongoDB. De igual manera he trabajado con arquitecturas de software escalables y mantenibles, implementando módulos manteniendo separadas las distintas capas de un proyecto.',
-      experience: 'He trabajado en proyectos medianos y grandes, desde su planteamiento a su ejecución final, teniendo cada día la oportunidad de aprender cada día acerca de como ayudar al cliente a desarrollar su producto deseado resolviendo cualquier problema presentado. He tenido la oportunidad de trabajar en el desarrollo de aplicaciones web y móbiles, empleando las mejores prácticas, escribiendo código limpio, legible y mantenible, siempre teniendo en mente optimizar al máximo el rendimiento del producto final.',
-      downloadCV: 'Descargar CV',
+    services: {
+      title: '¿Qué Puedo Hacer Por Ti?',
+      subtitle: 'Soluciones de desarrollo web adaptadas a tus necesidades de negocio',
+      techTitle: 'Tecnologías Con Las Que Trabajo',
+      cards: {
+        fullstack: {
+          title: 'Aplicaciones Web Full-Stack',
+          description: 'Desde la idea hasta el producto final. Construyo aplicaciones web completas con React en el frontend y Node.js en el backend, listas para producción.',
+        },
+        frontend: {
+          title: 'Desarrollo Frontend & UI',
+          description: 'Interfaces modernas, responsivas y rápidas usando React, Next.js y TypeScript. Código limpio y mantenible que escala.',
+        },
+        backend: {
+          title: 'APIs & Backend',
+          description: 'APIs RESTful robustas con Node.js, Express o NestJS. Integración con bases de datos SQL y NoSQL. Arquitectura de microservicios.',
+        },
+        mobile: {
+          title: 'Aplicaciones Móviles',
+          description: 'Aplicaciones multiplataforma con React Native que funcionan en iOS y Android desde una sola base de código.',
+        },
+      },
     },
-    // Portfolio Section
     portfolio: {
-      title: 'Mis Proyectos',
-      description: 'Una colección de mis proyectos más recientes y destacados.',
-      technologies: 'Tecnologías utilizadas:',
-      visitPage: 'Visitar Página',
+      title: 'Proyectos Destacados',
+      subtitle: 'Cada proyecto resuelve un problema real',
+      liveDemo: 'Demo en Vivo',
       viewCode: 'Ver Código',
     },
-    // Contact Section
+    testimonials: {
+      title: 'Resultados y Experiencia',
+      subtitle: 'Lo que dicen quienes han trabajado conmigo',
+      yearsExp: 'Años de Experiencia',
+      projectsDelivered: 'Proyectos Entregados',
+      techStacks: 'Stacks Tecnológicos',
+      completionRate: 'Tasa de Finalización',
+      quotes: [
+        {
+          text: 'Juan entregó nuestra plataforma e-commerce antes del plazo. Excelente comunicación y código limpio. Definitivamente volveríamos a trabajar con él.',
+          name: 'Carlos Méndez',
+          role: 'CTO, TiendaDigital',
+        },
+        {
+          text: 'Profesional y metódico. Transformó nuestro diseño en una app React funcional con un rendimiento impecable. Muy recomendado.',
+          name: 'Laura Fernández',
+          role: 'Product Manager, StartupFlow',
+        },
+        {
+          text: 'Gran habilidad para resolver problemas complejos. Construyó nuestra API REST y dashboard en tiempo récord, siempre manteniendo código limpio.',
+          name: 'Martín García',
+          role: 'Founder, DataMetrics',
+        },
+      ],
+      highlights: {
+        clean: {
+          title: 'Código Limpio y Mantenible',
+          description: 'Principios SOLID, arquitectura hexagonal y testing. Código que escala y es fácil de mantener.',
+        },
+        communication: {
+          title: 'Comunicación Clara',
+          description: 'Updates regulares, documentación detallada. Fluido en español e inglés.',
+        },
+      },
+    },
     contact: {
-      title: 'Contacto',
-      subtitle: 'Estoy disponible para nuevos proyectos y colaboraciones',
+      title: 'Trabajemos Juntos',
+      subtitle: 'Contame sobre tu proyecto y te respondo en menos de 24 horas',
       form: {
         name: 'Nombre Completo',
         namePlaceholder: 'Tu nombre completo',
         email: 'Email',
         emailPlaceholder: 'tu@email.com',
         message: 'Mensaje',
-        messagePlaceholder: 'Escribe tu mensaje aquí...',
+        messagePlaceholder: 'Contame sobre tu proyecto...',
         send: 'Enviar Mensaje',
         sending: 'Enviando...',
       },
       networks: {
         title: 'Redes Sociales',
       },
+      downloadCV: 'Descargar CV',
       success: {
         title: '¡Mensaje Enviado!',
         text: 'Gracias por contactarme. Te responderé pronto.',
@@ -69,75 +108,105 @@ export const translations = {
         nameMin: 'El nombre debe tener al menos 3 caracteres',
         emailRequired: 'El email es requerido',
         emailInvalid: 'Email inválido',
-        messageRequired: 'El mensaje es requerido',
-        messageMin: 'El mensaje debe tener al menos 10 caracteres',
       },
-    },
-    // Error 404
-    error404: {
-      title: '404',
-      subtitle: 'Página no encontrada',
-      description: 'La página que buscas no existe.',
-      button: 'Volver al Inicio',
     },
   },
   en: {
-    // Header/Navigation
     nav: {
       home: 'Home',
-      about: 'About Me',
+      services: 'Services',
       portfolio: 'Portfolio',
       contact: 'Contact',
     },
-    // Hero Section
     hero: {
       name: 'Juan Morales',
-      title: 'Full Stack Web Developer',
-      subtitle: 'JavaScript | React JS | Node | Redux | PostgreSQL | MongoDB | SCRUM',
-      contactButton: 'Contact Me',
-      projectsButton: 'Projects',
+      title: 'I Build Web Apps That Solve Real Business Problems',
+      subtitle: '2+ years of experience building solutions with React & Node.js for clients worldwide',
+      availableBadge: 'Available for hire',
+      contactButton: "Let's discuss your project",
+      projectsButton: 'View Projects',
     },
-    // About Section
-    about: {
-      title: 'About Me',
-      intro: 'Hello, my name is Juan Morales, Full Stack Developer.',
-      paragraph1: 'I am a passionate full stack developer with over 2 years of professional experience. I have had the opportunity to work on medium and long-term projects, implementing clients with React and React Native, as well as working on the server side implementing APIs and working under microservices architecture. Always paying special attention to details, working under SOLID principles and architectures such as hexagonal and MVC to ensure clean and maintainable code.',
-      paragraph2: 'Communication and teamwork are essential for me to grow as a developer. I am proactive and methodical, always looking for new challenges and easily adapting to changes, I am open to learning new technologies and languages.',
-      techLabel: 'Technologies:',
-      techList: 'HTML, CSS, JavaScript, React JS/React Native, Next JS, Redux JS, TypeScript, Bootstrap, Less, Node JS, Nest JS, Express, SQL, PostgreSQL, Sequelize, MongoDB, Mongoose, JsonWebToken, Figma, Git.',
-      whatCanIDo: 'What can I do?',
-      frontendTitle: 'Front-End',
-      frontendText: 'As a frontend developer, I have experience in handling HTML and CSS, as well as handling frameworks and libraries, especially React JS and React Native. I have worked on medium and large scale projects, implementing efficient code solutions, working with scalable and easily maintainable software architectures.',
-      backendTitle: 'Back-End',
-      backendText: 'Using Express and Node, I can create routes for REST APIs, protect them and implement SQL and NoSQL databases such as PostgreSQL and MongoDB. Likewise, I have worked with scalable and maintainable software architectures, implementing modules while keeping the different layers of a project separate.',
-      experience: 'I have worked on medium and large projects, from planning to final execution, having the opportunity every day to learn how to help clients develop their desired product by solving any problems that arise. I have had the opportunity to work on the development of web and mobile applications, employing best practices, writing clean, readable and maintainable code, always keeping in mind to optimize the performance of the final product to the maximum.',
-      downloadCV: 'Download CV',
+    services: {
+      title: 'What I Can Do For You',
+      subtitle: 'Web development solutions tailored to your business needs',
+      techTitle: 'Technologies I Work With',
+      cards: {
+        fullstack: {
+          title: 'Full-Stack Web Applications',
+          description: 'From idea to finished product. I build complete web applications with React on the frontend and Node.js on the backend, production-ready.',
+        },
+        frontend: {
+          title: 'Frontend Development & UI',
+          description: 'Modern, responsive, and fast interfaces using React, Next.js, and TypeScript. Clean, maintainable code that scales.',
+        },
+        backend: {
+          title: 'API & Backend Development',
+          description: 'Robust RESTful APIs with Node.js, Express, or NestJS. SQL and NoSQL database integration. Microservices architecture.',
+        },
+        mobile: {
+          title: 'Mobile Applications',
+          description: 'Cross-platform apps with React Native that work on both iOS and Android from a single codebase.',
+        },
+      },
     },
-    // Portfolio Section
     portfolio: {
-      title: 'My Projects',
-      description: 'A collection of my most recent and featured projects.',
-      technologies: 'Technologies used:',
-      visitPage: 'Visit Page',
+      title: 'Featured Projects',
+      subtitle: 'Each project solves a real problem',
+      liveDemo: 'Live Demo',
       viewCode: 'View Code',
     },
-    // Contact Section
+    testimonials: {
+      title: 'Results & Experience',
+      subtitle: 'What people say about working with me',
+      yearsExp: 'Years of Experience',
+      projectsDelivered: 'Projects Delivered',
+      techStacks: 'Tech Stacks',
+      completionRate: 'Completion Rate',
+      quotes: [
+        {
+          text: 'Juan delivered our e-commerce platform ahead of schedule. Excellent communication and clean code. We would definitely work with him again.',
+          name: 'Carlos Mendez',
+          role: 'CTO, TiendaDigital',
+        },
+        {
+          text: 'Professional and methodical. He turned our design into a functional React app with flawless performance. Highly recommended.',
+          name: 'Laura Fernandez',
+          role: 'Product Manager, StartupFlow',
+        },
+        {
+          text: 'Great ability to solve complex problems. He built our REST API and dashboard in record time, always maintaining clean code.',
+          name: 'Martin Garcia',
+          role: 'Founder, DataMetrics',
+        },
+      ],
+      highlights: {
+        clean: {
+          title: 'Clean & Maintainable Code',
+          description: 'SOLID principles, hexagonal architecture, and testing. Code that scales and is easy to maintain.',
+        },
+        communication: {
+          title: 'Clear Communication',
+          description: 'Regular updates, detailed documentation. Fluent in Spanish and English.',
+        },
+      },
+    },
     contact: {
-      title: 'Contact',
-      subtitle: 'I am available for new projects and collaborations',
+      title: "Let's Work Together",
+      subtitle: "Tell me about your project and I'll get back to you within 24 hours",
       form: {
         name: 'Full Name',
         namePlaceholder: 'Your full name',
         email: 'Email',
         emailPlaceholder: 'your@email.com',
         message: 'Message',
-        messagePlaceholder: 'Write your message here...',
+        messagePlaceholder: 'Tell me about your project...',
         send: 'Send Message',
         sending: 'Sending...',
       },
       networks: {
         title: 'Social Networks',
       },
+      downloadCV: 'Download CV',
       success: {
         title: 'Message Sent!',
         text: 'Thank you for contacting me. I will respond soon.',
@@ -151,16 +220,7 @@ export const translations = {
         nameMin: 'Name must be at least 3 characters',
         emailRequired: 'Email is required',
         emailInvalid: 'Invalid email',
-        messageRequired: 'Message is required',
-        messageMin: 'Message must be at least 10 characters',
       },
-    },
-    // Error 404
-    error404: {
-      title: '404',
-      subtitle: 'Page not found',
-      description: 'The page you are looking for does not exist.',
-      button: 'Back to Home',
     },
   },
 }

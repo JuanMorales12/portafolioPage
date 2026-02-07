@@ -1,28 +1,23 @@
-import { HashRouter, Routes, Route } from 'react-router-dom'
 import { LanguageProvider } from './contexts/LanguageContext'
 import { ThemeProvider } from './contexts/ThemeContext'
 import Layout from '@components/Layout'
 import Hero from '@components/Hero'
-import About from '@components/About'
+import Services from '@components/Services'
 import Portfolio from '@components/Portfolio'
+import Testimonials from '@components/Testimonials'
 import Contact from '@components/Contact'
-import Error404 from '@components/Error404'
 
 const App = () => {
   return (
     <ThemeProvider>
       <LanguageProvider>
-        <HashRouter>
-          <Layout>
-            <Routes>
-              <Route path="/" element={<Hero />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="*" element={<Error404 />} />
-            </Routes>
-          </Layout>
-        </HashRouter>
+        <Layout>
+          <Hero />
+          <Services />
+          <Portfolio />
+          <Testimonials />
+          <Contact />
+        </Layout>
       </LanguageProvider>
     </ThemeProvider>
   )

@@ -15,7 +15,12 @@
       "Bash(npm run build:*)",
       "Bash(npm uninstall:*)",
       "Bash(del tailwind.config.js)",
-      "Bash(npm run deploy:*)"
+      "Bash(npm run deploy:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd Loot Box project to portfolio\n\n- Add Loot Box interactive rewards system as 6th project\n- Technologies: Next.js, Framer Motion, Tailwind CSS, Zustand, Lucide React\n- Live demo: https://loot-box.vercel.app/\n- Repository: https://github.com/JuanMorales12/loot-box\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push)",
+      "Bash(del:*)",
+      "Bash(npm run lint:*)"
     ],
     "deny": [],
     "ask": []

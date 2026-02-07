@@ -1,56 +1,28 @@
-import { useState } from 'react'
-import { useScrollToTop } from '@hooks/useScrollToTop'
 import { useLanguage } from '../contexts/LanguageContext'
-import Modal from './Modal'
 import ProjectCard from './ProjectCard'
-import ProjectDetail from './ProjectDetail'
 import { projects } from '@/data/projects'
 
 const Portfolio = () => {
-  useScrollToTop()
   const { t } = useLanguage()
-  const [selectedProject, setSelectedProject] = useState<string | null>(null)
-
-  const currentProject = projects.find(p => p.id === selectedProject)
 
   return (
-    <section className="min-h-screen bg-white dark:bg-dark py-24 pt-32 transition-colors duration-300">
+    <section id="portfolio" className="py-24 bg-white dark:bg-dark transition-colors duration-300">
       <div className="container mx-auto px-6">
-        <div className="mb-12">
-          <h3 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white text-center transition-colors duration-300">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-300">
             {t.portfolio.title}
-          </h3>
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto transition-colors duration-300">
+            {t.portfolio.subtitle}
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              image={project.image}
-              title={project.title}
-              description={project.description}
-              onClick={() => setSelectedProject(project.id)}
-            />
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       </div>
-
-      {currentProject && (
-        <Modal
-          isOpen={!!selectedProject}
-          closeModal={() => setSelectedProject(null)}
-        >
-          <ProjectDetail
-            srcImg={currentProject.image}
-            projectTitle={currentProject.title}
-            projectDesc={currentProject.description}
-            tecn={currentProject.technologies}
-            urlPage={currentProject.pageUrl}
-            urlRepo={currentProject.repoUrl}
-            btnPage={currentProject.buttonText}
-          />
-        </Modal>
-      )}
     </section>
   )
 }

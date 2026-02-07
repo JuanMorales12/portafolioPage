@@ -1,17 +1,16 @@
 import { useState, type FormEvent, type ChangeEvent } from 'react'
 import Swal from 'sweetalert2'
-import { useScrollToTop } from '@hooks/useScrollToTop'
 import { useLanguage } from '../contexts/LanguageContext'
 import { validateForm } from '@utils/validation'
 import type { FormData, ValidationErrors } from '../types'
 import ContactNetwork from './ContactNetwork'
+import CV from '@assets/cv/Cv_Juan_Morales.pdf'
 import githubIcon from '@assets/image/github (3).png'
 import linkedinIcon from '@assets/image/linkedin.png'
 import whatsappIcon from '@assets/image/6214499_handset_logo_telephone_whatsapp_icon.png'
 import emailIcon from '@assets/image/email (1).png'
 
 const Contact = () => {
-  useScrollToTop()
   const { t } = useLanguage()
 
   const [formData, setFormData] = useState<FormData>({
@@ -27,13 +26,13 @@ const Contact = () => {
     const { name, value } = e.target
     const newData = { ...formData, [name]: value }
     setFormData(newData)
-    setErrors(validateForm(newData))
+    setErrors(validateForm(newData, t))
   }
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    const validationErrors = validateForm(formData)
+    const validationErrors = validateForm(formData, t)
 
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors)
@@ -66,9 +65,9 @@ const Contact = () => {
         })
         setFormData({ fullname: '', email: '', message: '' })
       } else {
-        throw new Error('Error en el envío')
+        throw new Error('Error')
       }
-    } catch (error) {
+    } catch {
       Swal.fire({
         title: t.contact.error.title,
         text: t.contact.error.text,
@@ -81,18 +80,20 @@ const Contact = () => {
   }
 
   return (
-    <section className="min-h-screen bg-gray-50 dark:bg-linear-to-br dark:from-dark dark:via-dark-lighter dark:to-dark py-24 pt-32 transition-colors duration-300">
+    <section id="contact" className="py-24 bg-gray-50 dark:bg-dark-lighter transition-colors duration-300">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-5xl font-bold text-gray-900 dark:text-white text-center mb-4 transition-colors duration-300">
-            {t.contact.title}
-          </h2>
-          <p className="text-gray-600 dark:text-gray-400 text-center mb-12 transition-colors duration-300">
-            {t.contact.subtitle}
-          </p>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-300">
+              {t.contact.title}
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400 transition-colors duration-300">
+              {t.contact.subtitle}
+            </p>
+          </div>
 
           {/* Social Networks */}
-          <div className="flex flex-wrap justify-center gap-6 mb-12">
+          <div className="flex flex-wrap justify-center gap-6 mb-8">
             <ContactNetwork
               href="https://github.com/JuanMorales12"
               src={githubIcon}
@@ -106,7 +107,7 @@ const Contact = () => {
               title="LinkedIn"
             />
             <ContactNetwork
-              href="https://wa.me/5491234567890"
+              href="https://wa.me/541164464754"
               src={whatsappIcon}
               alt="WhatsApp"
               title="WhatsApp"
@@ -119,10 +120,24 @@ const Contact = () => {
             />
           </div>
 
+          {/* CV Download */}
+          <div className="flex justify-center mb-12">
+            <a
+              href={CV}
+              download="Juan_Morales_CV"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gray-200 dark:bg-dark text-gray-700 dark:text-gray-300 font-medium rounded-lg hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors duration-200"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              {t.contact.downloadCV}
+            </a>
+          </div>
+
           {/* Contact Form */}
           <form
             onSubmit={handleSubmit}
-            className="bg-white dark:bg-dark-lighter/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-2xl transition-colors duration-300"
+            className="bg-white dark:bg-dark/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-200 dark:border-gray-800 shadow-2xl transition-colors duration-300"
           >
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
@@ -137,7 +152,7 @@ const Contact = () => {
                   onChange={handleChange}
                   className={`w-full px-4 py-3 bg-gray-50 dark:bg-dark border ${
                     errors.fullname ? 'border-red-500' : 'border-gray-300 dark:border-gray-700'
-                  } rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary transition-colors duration-300`}
+                  } rounded-lg text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary transition-colors duration-300`}
                   placeholder={t.contact.form.namePlaceholder}
                 />
                 {errors.fullname && (
@@ -157,7 +172,7 @@ const Contact = () => {
                   onChange={handleChange}
                   className={`w-full px-4 py-3 bg-gray-50 dark:bg-dark border ${
                     errors.email ? 'border-red-500' : 'border-gray-300 dark:border-gray-700'
-                  } rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary transition-colors duration-300`}
+                  } rounded-lg text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary transition-colors duration-300`}
                   placeholder={t.contact.form.emailPlaceholder}
                 />
                 {errors.email && (
@@ -177,7 +192,7 @@ const Contact = () => {
                 onChange={handleChange}
                 rows={6}
                 maxLength={5000}
-                className="w-full px-4 py-3 bg-gray-50 dark:bg-dark border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary resize-none transition-colors duration-300"
+                className="w-full px-4 py-3 bg-gray-50 dark:bg-dark border border-gray-300 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary resize-none transition-colors duration-300"
                 placeholder={t.contact.form.messagePlaceholder}
               />
             </div>

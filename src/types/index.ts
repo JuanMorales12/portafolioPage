@@ -15,43 +15,20 @@ export interface ValidationErrors {
 export interface Project {
   id: string
   title: string
-  description: string
-  technologies: string
+  description: {
+    es: string
+    en: string
+  }
+  technologies: string[]
   image: string
   pageUrl: string
   repoUrl: string
-  buttonText?: string
-}
-
-// Modal Types
-export interface ModalState {
-  isOpen: boolean
-  openModal: () => void
-  closeModal: () => void
+  metrics?: string
 }
 
 // Component Props
-export interface ModalProps {
-  children: React.ReactNode
-  isOpen: boolean
-  closeModal: () => void
-}
-
 export interface ProjectCardProps {
-  image: string
-  title: string
-  description: string
-  onClick: () => void
-}
-
-export interface ProjectDetailProps {
-  srcImg: string
-  projectTitle: string
-  projectDesc: string
-  tecn: string
-  urlPage: string
-  urlRepo: string
-  btnPage?: string
+  project: Project
 }
 
 export interface SkillProps {
@@ -68,11 +45,6 @@ export interface HeroSocialProps {
   title: string
 }
 
-export interface HeroButtonProps {
-  path: string
-  text: string
-}
-
 export interface ContactNetworkProps {
   href: string
   src: string
@@ -80,5 +52,7 @@ export interface ContactNetworkProps {
   title?: string
 }
 
-// Hook Return Types
-export type UseModalReturn = [boolean, () => void, () => void]
+export interface StatCardProps {
+  number: string
+  label: string
+}
