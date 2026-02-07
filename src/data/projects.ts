@@ -7,6 +7,7 @@ import angularTableImage from '@assets/image/screenshot/angular-project.png'
 import ecommerceImage from '@assets/image/screenshot/ecommerce.png'
 import lootBoxImage from '@assets/image/screenshot/loot-box.png'
 import saasImage from '@assets/image/screenshot/saas.png'
+import socialAiImage from '@assets/image/screenshot/social-contenedor.png'
 
 export const projects: Project[] = [
   {
@@ -34,6 +35,19 @@ export const projects: Project[] = [
     pageUrl: 'https://github.com/JuanMorales12/mern_app',
     repoUrl: 'https://github.com/JuanMorales12/mern_app',
     metrics: 'Full CRUD + Auth',
+  },
+  {
+    id: 'social-ai-generator',
+    title: 'SocialAI Generator',
+    description: {
+      es: 'Generador de contenido para redes sociales potenciado por IA. Crea posts optimizados para Twitter/X y LinkedIn con vista previa en tiempo real, 7 tonos y contador de caracteres.',
+      en: 'AI-powered social media content generator. Creates optimized posts for Twitter/X and LinkedIn with live preview, 7 tones, and character counter.',
+    },
+    technologies: ['Next.js 16', 'TypeScript', 'Tailwind CSS', 'Google Gemini AI'],
+    image: socialAiImage,
+    pageUrl: 'https://social-ai-content-generator.vercel.app/',
+    repoUrl: 'https://github.com/JuanMorales12/social-ai-content-generator',
+    metrics: 'AI + Prompt Engineering',
   },
   {
     id: 'angular-table',
