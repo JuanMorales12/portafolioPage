@@ -6,8 +6,22 @@ import animationsImage from '@assets/image/screenshot/animations.png'
 import angularTableImage from '@assets/image/screenshot/angular-project.png'
 import ecommerceImage from '@assets/image/screenshot/ecommerce.png'
 import lootBoxImage from '@assets/image/screenshot/loot-box.png'
+import saasImage from '@assets/image/screenshot/saas.png'
 
 export const projects: Project[] = [
+  {
+    id: 'mini-saas',
+    title: 'Mini SaaS Platform',
+    description: {
+      es: 'Plataforma SaaS full-stack con autenticación, suscripciones Stripe (mensual/anual), gestión de billing via Customer Portal y Row-Level Security para aislamiento de datos.',
+      en: 'Full-stack SaaS platform with authentication, Stripe subscriptions (monthly/yearly), billing management via Customer Portal, and Row-Level Security for data isolation.',
+    },
+    technologies: ['Next.js 15', 'React 19', 'TypeScript', 'Stripe', 'Supabase', 'Tailwind CSS'],
+    image: saasImage,
+    pageUrl: 'https://juanmoralessaas.vercel.app/',
+    repoUrl: 'https://github.com/JuanMorales12/mini_saas',
+    metrics: 'Stripe + Auth + RLS',
+  },
   {
     id: 'mern-app',
     title: 'MERN App',
