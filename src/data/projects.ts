@@ -4,7 +4,7 @@ import mernEvidence from '@assets/image/mern_evidence.png'
 import kanbanImage from '@assets/image/screenshot/kanban.png'
 import animationsImage from '@assets/image/screenshot/animations.png'
 import angularTableImage from '@assets/image/screenshot/angular-project.png'
-import ecommerceImage from '@assets/image/screenshot/ecommerce.png'
+import ecommerceImage from '@assets/image/screenshot/ecommerce2.png'
 import lootBoxImage from '@assets/image/screenshot/loot-box.png'
 import saasImage from '@assets/image/screenshot/saas.png'
 import socialAiImage from '@assets/image/screenshot/social-contenedor.png'
@@ -22,6 +22,19 @@ export const projects: Project[] = [
     pageUrl: 'https://juanmoralessaas.vercel.app/',
     repoUrl: 'https://github.com/JuanMorales12/mini_saas',
     metrics: 'Stripe + Auth + RLS',
+  },
+  {
+    id: 'ecommerce',
+    title: 'E-Commerce Store',
+    description: {
+      es: 'E-commerce de ropa con carrito de compras, filtrado por categorías, checkout con generación de órdenes y diseño responsive.',
+      en: 'Clothing e-commerce with shopping cart, category filtering, checkout with order generation, and responsive design.',
+    },
+    technologies: ['Next.js 16', 'React 19', 'TypeScript', 'Firebase', 'Tailwind CSS'],
+    image: ecommerceImage,
+    pageUrl: 'https://coder-h-morales-juan.vercel.app/',
+    repoUrl: 'https://github.com/JuanMorales12/CoderH_MoralesJuan',
+    metrics: 'Cart + Checkout + Firestore',
   },
   {
     id: 'mern-app',
@@ -61,19 +74,6 @@ export const projects: Project[] = [
     pageUrl: 'https://angular-app-table.vercel.app/',
     repoUrl: 'https://github.com/JuanMorales12/angular_app_table',
     metrics: 'Real-time filtering',
-  },
-  {
-    id: 'ecommerce',
-    title: 'E-Commerce Store',
-    description: {
-      es: 'Tienda online completa con catálogo de productos, carrito de compras y conexión a base de datos Firebase. Interfaz responsiva y fluida.',
-      en: 'Complete online store with product catalog, shopping cart, and Firebase database connection. Responsive and smooth interface.',
-    },
-    technologies: ['React', 'Tailwind CSS', 'Firebase', 'JavaScript'],
-    image: ecommerceImage,
-    pageUrl: 'https://tienda-gz.netlify.app/',
-    repoUrl: 'https://github.com/JuanMorales12/CoderH_MoralesJuan',
-    metrics: 'Full cart + DB',
   },
   {
     id: 'loot-box',
