@@ -42,6 +42,8 @@ export const translations = {
       subtitle: 'Cada proyecto resuelve un problema real',
       liveDemo: 'Demo en Vivo',
       viewCode: 'Ver Código',
+      showMore: 'Ver más',
+      showLess: 'Ver menos',
     },
     testimonials: {
       title: 'Resultados y Experiencia',
@@ -154,6 +156,8 @@ export const translations = {
       subtitle: 'Each project solves a real problem',
       liveDemo: 'Live Demo',
       viewCode: 'View Code',
+      showMore: 'Show more',
+      showLess: 'Show less',
     },
     testimonials: {
       title: 'Results & Experience',

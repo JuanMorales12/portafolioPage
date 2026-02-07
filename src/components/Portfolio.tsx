@@ -1,9 +1,15 @@
+import { useState } from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
 import ProjectCard from './ProjectCard'
 import { projects } from '@/data/projects'
 
+const INITIAL_COUNT = 4
+
 const Portfolio = () => {
   const { t } = useLanguage()
+  const [showAll, setShowAll] = useState(false)
+
+  const visibleProjects = showAll ? projects : projects.slice(0, INITIAL_COUNT)
 
   return (
     <section id="portfolio" className="py-24 bg-white dark:bg-dark transition-colors duration-300">
@@ -18,10 +24,21 @@ const Portfolio = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project) => (
+          {visibleProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
+
+        {projects.length > INITIAL_COUNT && (
+          <div className="text-center mt-12">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="px-8 py-3 bg-primary hover:bg-primary-light text-white text-sm font-medium rounded-lg transition-colors duration-200"
+            >
+              {showAll ? t.portfolio.showLess : t.portfolio.showMore}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   )

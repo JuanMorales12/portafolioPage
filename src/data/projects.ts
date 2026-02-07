@@ -37,19 +37,6 @@ export const projects: Project[] = [
     metrics: 'Cart + Checkout + Firestore',
   },
   {
-    id: 'mern-app',
-    title: 'MERN App',
-    description: {
-      es: 'Aplicación full-stack con autenticación, CRUD completo y API RESTful. Demuestra la capacidad de construir una aplicación completa de principio a fin.',
-      en: 'Full-stack application with authentication, complete CRUD, and RESTful API. Demonstrates the ability to build a complete application from start to finish.',
-    },
-    technologies: ['MongoDB', 'Express', 'React', 'Node.js', 'JavaScript'],
-    image: mernEvidence,
-    pageUrl: 'https://github.com/JuanMorales12/mern_app',
-    repoUrl: 'https://github.com/JuanMorales12/mern_app',
-    metrics: 'Full CRUD + Auth',
-  },
-  {
     id: 'social-ai-generator',
     title: 'SocialAI Generator',
     description: {
@@ -61,6 +48,31 @@ export const projects: Project[] = [
     pageUrl: 'https://social-ai-content-generator.vercel.app/',
     repoUrl: 'https://github.com/JuanMorales12/social-ai-content-generator',
     metrics: 'AI + Prompt Engineering',
+  },
+  {
+    id: 'animations',
+    title: 'Based Animations',
+    description: {
+      es: 'Proyecto de animaciones web interactivas con Framer Motion y GSAP. Explora técnicas avanzadas de animación para interfaces modernas.',
+      en: 'Interactive web animations project with Framer Motion and GSAP. Explores advanced animation techniques for modern interfaces.',
+    },
+    technologies: ['React', 'TypeScript', 'Framer Motion', 'GSAP', 'Vite'],
+    image: animationsImage,
+    pageUrl: 'https://basedanimationsjuan.vercel.app/',
+    repoUrl: 'https://github.com/JuanMorales12/based_animations_juan',
+  },
+  {
+    id: 'mern-app',
+    title: 'MERN App',
+    description: {
+      es: 'Aplicación full-stack con autenticación, CRUD completo y API RESTful. Demuestra la capacidad de construir una aplicación completa de principio a fin.',
+      en: 'Full-stack application with authentication, complete CRUD, and RESTful API. Demonstrates the ability to build a complete application from start to finish.',
+    },
+    technologies: ['MongoDB', 'Express', 'React', 'Node.js', 'JavaScript'],
+    image: mernEvidence,
+    pageUrl: 'https://github.com/JuanMorales12/mern_app',
+    repoUrl: 'https://github.com/JuanMorales12/mern_app',
+    metrics: 'Full CRUD + Auth',
   },
   {
     id: 'angular-table',
@@ -87,18 +99,6 @@ export const projects: Project[] = [
     pageUrl: 'https://loot-box.vercel.app/',
     repoUrl: 'https://github.com/JuanMorales12/loot-box',
     metrics: 'State + Animations',
-  },
-  {
-    id: 'animations',
-    title: 'Based Animations',
-    description: {
-      es: 'Proyecto de animaciones web interactivas con Framer Motion y GSAP. Explora técnicas avanzadas de animación para interfaces modernas.',
-      en: 'Interactive web animations project with Framer Motion and GSAP. Explores advanced animation techniques for modern interfaces.',
-    },
-    technologies: ['React', 'TypeScript', 'Framer Motion', 'GSAP', 'Vite'],
-    image: animationsImage,
-    pageUrl: 'https://basedanimationsjuan.vercel.app/',
-    repoUrl: 'https://github.com/JuanMorales12/based_animations_juan',
   },
   {
     id: 'kanban',
