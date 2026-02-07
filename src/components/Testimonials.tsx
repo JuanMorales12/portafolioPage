@@ -18,7 +18,7 @@ const Testimonials = () => {
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16 bg-white dark:bg-dark-lighter rounded-2xl p-6 border border-gray-200 dark:border-gray-800 transition-colors duration-300">
-          <StatCard number="2+" label={t.testimonials.yearsExp} />
+          <StatCard number="7+" label={t.testimonials.yearsExp} />
           <StatCard number="10+" label={t.testimonials.projectsDelivered} />
           <StatCard number="5+" label={t.testimonials.techStacks} />
           <StatCard number="100%" label={t.testimonials.completionRate} />

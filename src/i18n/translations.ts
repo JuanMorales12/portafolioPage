@@ -9,7 +9,7 @@ export const translations = {
     hero: {
       name: 'Juan Morales',
       title: 'Construyo Aplicaciones Web Que Resuelven Problemas Reales',
-      subtitle: '+2 años de experiencia creando soluciones con React & Node.js para clientes en todo el mundo',
+      subtitle: '+7 años de experiencia creando soluciones con React & Node.js para clientes en todo el mundo',
       availableBadge: 'Disponible para contratar',
       contactButton: 'Hablemos de tu proyecto',
       projectsButton: 'Ver Proyectos',
@@ -121,7 +121,7 @@ export const translations = {
     hero: {
       name: 'Juan Morales',
       title: 'I Build Web Apps That Solve Real Business Problems',
-      subtitle: '2+ years of experience building solutions with React & Node.js for clients worldwide',
+      subtitle: '7+ years of experience building solutions with React & Node.js for clients worldwide',
       availableBadge: 'Available for hire',
       contactButton: "Let's discuss your project",
       projectsButton: 'View Projects',
