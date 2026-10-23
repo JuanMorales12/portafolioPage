@@ -1,6 +1,7 @@
 import { useLanguage } from '../contexts/LanguageContext'
 import { scrollToSection } from '@hooks/useScrollToSection'
 import HeroSocial from './HeroSocial'
+import UpworkLink from './UpworkLink'
 import linkedinLogo from '@assets/image/linkedin.png'
 import githubLogo from '@assets/image/github (3).png'
 import userPhoto from '@assets/image/personal.jpg'
@@ -37,6 +38,10 @@ const Hero = () => {
               {t.hero.subtitle}
             </p>
 
+            <p className="text-sm md:text-base font-medium text-gray-800 dark:text-gray-200 leading-relaxed">
+              {t.hero.trustLine}
+            </p>
+
             {/* Social Links */}
             <div className="flex gap-4 justify-center lg:justify-start">
               <HeroSocial
@@ -53,17 +58,21 @@ const Hero = () => {
               />
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex gap-4 justify-center lg:justify-start pt-4">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center lg:justify-start pt-2">
+              <UpworkLink className="w-full sm:w-auto" />
               <button
+                type="button"
                 onClick={() => scrollToSection('contact')}
-                className="px-8 py-3 bg-gradient-to-r from-primary to-primary-light text-white font-medium rounded-lg hover:scale-105 transform transition-all duration-200 shadow-lg hover:shadow-primary/50"
+                className="min-h-11 w-full sm:w-auto px-6 py-3 border-2 border-secondary-darker text-secondary-darker dark:border-secondary-light dark:text-secondary-light font-semibold rounded-lg hover:bg-secondary-darker hover:text-white dark:hover:bg-secondary-light dark:hover:text-gray-950 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary-darker focus-visible:ring-offset-2 focus-visible:ring-offset-gray-50 dark:focus-visible:ring-offset-dark"
               >
                 {t.hero.contactButton}
               </button>
+            </div>
+            <div className="flex justify-center lg:justify-start">
               <button
+                type="button"
                 onClick={() => scrollToSection('portfolio')}
-                className="px-8 py-3 bg-secondary/20 backdrop-blur-sm text-secondary dark:text-white font-medium rounded-lg border-2 border-secondary hover:bg-secondary hover:text-white hover:scale-105 transform transition-all duration-200"
+                className="min-h-11 text-sm font-semibold text-gray-800 dark:text-gray-100 underline underline-offset-4 hover:text-primary-darker dark:hover:text-primary-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-darker rounded-sm"
               >
                 {t.hero.projectsButton}
               </button>

@@ -11,19 +11,53 @@ export interface ValidationErrors {
   message?: string
 }
 
-// Project Types
+export type Locale = 'es' | 'en'
+export type Localized = Record<Locale, string>
+
+export type ProjectKind = 'client' | 'product' | 'open-source' | 'template' | 'course' | 'practice'
+
+export interface CaseResult {
+  headline: Localized
+  detail?: Localized
+}
+
+export interface ProjectImage {
+  src: string
+  alt: Localized
+  caption?: Localized
+}
+
+export interface CaseStudy {
+  hook: Localized
+  clientContext: Localized
+  problem: Localized[]
+  role: Localized
+  solution: Localized[]
+  results: CaseResult[]
+  stack?: Localized
+  gallery?: ProjectImage[]
+  nda?: boolean
+}
+
 export interface Project {
   id: string
+  slug: string
+  kind: ProjectKind
+  featured: boolean
+  order: number
   title: string
-  description: {
-    es: string
-    en: string
-  }
+  description: Localized
   technologies: string[]
   image: string
-  pageUrl: string
-  repoUrl: string
-  metrics?: string
+  imageAlt: Localized
+  pageUrl?: string
+  repoUrl?: string
+  metrics?: Localized
+  caseStudy?: CaseStudy
+  label?: Localized
+  overview?: Localized
+  highlights?: Localized[]
+  gallery?: ProjectImage[]
 }
 
 // Component Props
@@ -55,4 +89,5 @@ export interface ContactNetworkProps {
 export interface StatCardProps {
   number: string
   label: string
+  compact?: boolean
 }
