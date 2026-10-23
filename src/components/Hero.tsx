@@ -30,11 +30,11 @@ const Hero = () => {
               </span>
             </h1>
 
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-800 dark:text-white leading-tight transition-colors duration-300">
+            <h2 className="max-w-3xl text-balance text-xl font-semibold leading-snug text-gray-800 transition-colors duration-300 dark:text-white sm:text-2xl lg:mx-0 lg:text-3xl mx-auto">
               {t.hero.title}
             </h2>
 
-            <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed transition-colors duration-300">
+            <p className="mx-auto max-w-3xl text-pretty text-base leading-relaxed text-gray-600 transition-colors duration-300 dark:text-gray-400 sm:text-lg lg:mx-0">
               {t.hero.subtitle}
             </p>
 

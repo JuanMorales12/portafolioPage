@@ -6,7 +6,7 @@ const Testimonials = () => {
   const { t } = useLanguage()
 
   const stats = [
-    { number: '7+', label: t.testimonials.yearsExp, compact: false },
+    { number: '10', label: t.testimonials.yearsExp, compact: false },
     { number: 'Top Rated Plus', label: t.testimonials.topRated, compact: true },
     { number: '100%', label: t.testimonials.jobSuccess, compact: false },
     { number: '11', label: t.testimonials.jobs, compact: false },

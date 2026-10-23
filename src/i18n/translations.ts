@@ -11,8 +11,8 @@ export const translations = {
     },
     hero: {
       name: 'Juan Morales',
-      title: 'Construyo Aplicaciones Web Que Resuelven Problemas Reales',
-      subtitle: '+7 años de experiencia creando soluciones con React & Node.js para clientes en todo el mundo',
+      title: 'Ingeniero full-stack senior para productos SaaS, pagos y agentes de IA',
+      subtitle: 'Diseño, construyo y pongo en producción aplicaciones web de punta a punta con Next.js, React, TypeScript, Node y Supabase, desde SaaS multi-tenant y cobros con Stripe hasta integraciones con Claude y OpenAI. 10 años de experiencia, trabajando con clientes de EE.UU., Europa y LATAM.',
       availableBadge: 'Disponible para contratar',
       hireButton: 'Contratame en Upwork',
       hireShort: 'Contratar',
@@ -162,8 +162,8 @@ export const translations = {
     },
     hero: {
       name: 'Juan Morales',
-      title: 'I Build Web Apps That Solve Real Business Problems',
-      subtitle: '7+ years of experience building solutions with React & Node.js for clients worldwide',
+      title: 'Senior full-stack engineer for SaaS products, payments and AI agents',
+      subtitle: 'I design, build and ship production web apps end-to-end with Next.js, React, TypeScript, Node and Supabase, from multi-tenant SaaS and Stripe billing to Claude and OpenAI integrations. 10 years of experience, working with clients in the US, Europe and LATAM.',
       availableBadge: 'Available for hire',
       hireButton: 'Hire me on Upwork',
       hireShort: 'Hire me',
