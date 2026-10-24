@@ -15,7 +15,8 @@ import miniSaasDashboardFree from '@assets/image/work/minisaas-dashboard-free.we
 import miniSaasDashboardPro from '@assets/image/work/minisaas-dashboard-pro.webp'
 import fitnessDashboard from '@assets/image/case-studies/fitness-saas.svg'
 import whatsappBookingChat from '@assets/image/case-studies/whatsapp-booking.svg'
-import opsAgentDiagram from '@assets/image/case-studies/claude-ops.svg'
+import opsAgentDiagram from '@assets/image/case-studies/claude-ops-agent-architecture.webp'
+import opsAgentDiagramFallback from '@assets/image/case-studies/claude-ops-agent-architecture.png'
 
 const text = (en: string, es: string): Localized => ({ en, es })
 
@@ -253,9 +254,10 @@ export const projects: Project[] = [
     ),
     technologies: ['TypeScript', 'Claude', 'MCP', 'Telegram', 'Zod'],
     image: opsAgentDiagram,
+    imageFallback: opsAgentDiagramFallback,
     imageAlt: text(
-      'Illustration of the agent architecture and human approval flow',
-      'Ilustración de la arquitectura del agente y el flujo de aprobación humana',
+      'Architecture diagram: Telegram to a Claude agent that can read orders, while refunds, cancellations and address changes wait for human approval, with the same tools exposed through MCP',
+      'Diagrama de arquitectura: Telegram hacia un agente de Claude que puede leer pedidos, mientras reembolsos, cancelaciones y cambios de dirección esperan aprobación humana, con las mismas herramientas expuestas por MCP',
     ),
     metrics: text('Human-in-the-loop · 15 tests + evals', 'Humano en el circuito · 15 tests + evals'),
     caseStudy: {

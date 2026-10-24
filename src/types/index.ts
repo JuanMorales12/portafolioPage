@@ -49,6 +49,8 @@ export interface Project {
   description: Localized
   technologies: string[]
   image: string
+  /** PNG used when the browser does not render the WebP in `image`. */
+  imageFallback?: string
   imageAlt: Localized
   pageUrl?: string
   repoUrl?: string

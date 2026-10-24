@@ -1,6 +1,7 @@
 import type { Localized, Project } from '../types'
 
-import fieldServiceImage from '@assets/image/case-studies/field-service-saas.svg'
+import fieldServiceImage from '@assets/image/case-studies/field-service-saas-architecture.webp'
+import fieldServiceImageFallback from '@assets/image/case-studies/field-service-saas-architecture.png'
 import frenchErpImage from '@assets/image/case-studies/french-construction-erp.svg'
 import insuranceProduct from '@assets/image/work/insurance-product-select.webp'
 import insurancePlans from '@assets/image/work/insurance-plans-coverages.webp'
@@ -23,9 +24,10 @@ export const fieldServiceProject: Project = {
   ),
   technologies: ['React 19', 'TypeScript', 'Supabase', 'Stripe', 'PostgreSQL', 'Firebase'],
   image: fieldServiceImage,
+  imageFallback: fieldServiceImageFallback,
   imageAlt: text(
-    'Diagram of a field-service app, tenant isolation, and billing',
-    'Diagrama de una app de servicios de campo, aislamiento de tenants y facturación',
+    'Architecture diagram: tenants isolated with Row-Level Security, Edge Functions for sign-up, Stripe and email',
+    'Diagrama de arquitectura: tenants aislados con Row-Level Security, Edge Functions para el alta, Stripe y el email',
   ),
   metrics: text('Lead dev on v1 · 53/57 commits', 'Lead de la v1 · 53/57 commits'),
   caseStudy: {

@@ -1,5 +1,6 @@
 import { useLanguage } from '../contexts/LanguageContext'
 import type { Project } from '../types'
+import CaseStudyFigure from './CaseStudyFigure'
 
 interface CaseStudyCardProps {
   project: Project
@@ -14,15 +15,21 @@ const CaseStudyCard = ({ project, index, onRead }: CaseStudyCardProps) => {
     <article className="overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 shadow-sm transition-colors duration-300 dark:border-gray-800 dark:bg-dark-lighter">
       <div className="h-1 bg-gradient-to-r from-primary to-secondary" aria-hidden="true" />
       <div className="grid lg:grid-cols-[minmax(240px,340px)_1fr]">
-        <div className="relative bg-gray-200 dark:bg-dark">
-          <img
-            src={project.image}
-            alt={project.imageAlt[language]}
-            className="aspect-video h-full w-full object-cover"
-          />
-          <span className="absolute left-3 top-3 rounded-full bg-white/95 px-2.5 py-1 text-xs font-semibold text-gray-800 shadow-sm dark:bg-dark/90 dark:text-gray-100">
-            {t.portfolio.illustration}
-          </span>
+        <div className={`relative bg-gray-200 dark:bg-dark ${project.imageFallback ? 'flex items-center' : ''}`}>
+          {project.imageFallback ? (
+            <CaseStudyFigure project={project} />
+          ) : (
+            <img
+              src={project.image}
+              alt={project.imageAlt[language]}
+              className="aspect-video h-full w-full object-cover"
+            />
+          )}
+          {!project.imageFallback && (
+            <span className="absolute left-3 top-3 rounded-full bg-white/95 px-2.5 py-1 text-xs font-semibold text-gray-800 shadow-sm dark:bg-dark/90 dark:text-gray-100">
+              {t.portfolio.illustration}
+            </span>
+          )}
         </div>
 
         <div className="flex flex-col gap-4 p-6 md:p-8">
