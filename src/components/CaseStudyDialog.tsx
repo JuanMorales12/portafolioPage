@@ -2,6 +2,7 @@ import { useEffect, useId, useRef, type ReactNode } from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
 import type { Project } from '../types'
 import CaseStudyFigure from './CaseStudyFigure'
+import CaseStudyGallery from './CaseStudyGallery'
 import UpworkLink from './UpworkLink'
 
 interface CaseStudyDialogProps {
@@ -85,10 +86,14 @@ const CaseStudyDialog = ({ project, onClose }: CaseStudyDialogProps) => {
         </div>
 
         <div className="space-y-8 px-5 py-6 sm:px-8 sm:py-8">
-          {project.imageFallback && (
-            <figure className="overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-gray-700">
-              <CaseStudyFigure project={project} />
-            </figure>
+          {study.gallery && study.gallery.length > 0 ? (
+            <CaseStudyGallery images={study.gallery} />
+          ) : (
+            project.imageFallback && (
+              <figure className="overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-gray-700">
+                <CaseStudyFigure project={project} />
+              </figure>
+            )
           )}
 
           <p className="text-lg leading-relaxed text-gray-800 dark:text-gray-100">{study.hook[language]}</p>

@@ -69,6 +69,22 @@ dialog.case-dialog::backdrop {
   background: rgba(15, 23, 42, 0.72);
 }
 
+dialog.image-lightbox {
+  margin: auto;
+  padding: 0;
+  border: none;
+  width: auto;
+  max-width: calc(100vw - 2rem);
+  max-height: calc(100vh - 2rem);
+  background: transparent;
+  overflow: visible;
+  color: white;
+}
+
+dialog.image-lightbox::backdrop {
+  background: rgba(15, 23, 42, 0.88);
+}
+
 .animate-fade-in {
   animation: fadeIn 1s ease-in;
 }

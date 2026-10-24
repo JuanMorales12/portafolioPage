@@ -1,7 +1,13 @@
 import type { Localized, Project } from '../types'
 
-import fieldServiceImage from '@assets/image/case-studies/field-service-saas-architecture.webp'
-import fieldServiceImageFallback from '@assets/image/case-studies/field-service-saas-architecture.png'
+import fieldServiceDashboard from '@assets/image/case-studies/field-service/field-service-dispatcher-dashboard.webp'
+import fieldServiceCalendar from '@assets/image/case-studies/field-service/field-service-technician-calendar.webp'
+import fieldServiceNewOrder from '@assets/image/case-studies/field-service/field-service-new-order-modal.webp'
+import fieldServiceQuote from '@assets/image/case-studies/field-service/field-service-quote-to-invoice.webp'
+import fieldServiceInvoice from '@assets/image/case-studies/field-service/field-service-invoice-pdf.webp'
+import fieldServiceSignup from '@assets/image/case-studies/field-service/field-service-signup-plans.webp'
+import fieldServiceMobile from '@assets/image/case-studies/field-service/field-service-technician-mobile.webp'
+import fieldServiceArchitecture from '@assets/image/case-studies/field-service-saas-architecture.webp'
 import frenchErpImage from '@assets/image/case-studies/french-construction-erp.svg'
 import insuranceProduct from '@assets/image/work/insurance-product-select.webp'
 import insurancePlans from '@assets/image/work/insurance-plans-coverages.webp'
@@ -23,11 +29,10 @@ export const fieldServiceProject: Project = {
     'ERP de servicios de campo para una empresa de reparaciones en República Dominicana, después reconstruido como SaaS multi-tenant. La app de operaciones cubre órdenes de servicio, calendarios de técnicos, historial y mapas de clientes, un formulario público de reservas, presupuestos → facturas → pagos en PDF, inventario y nómina. Para el SaaS escribí la migración multi-tenant en Supabase (tenants, aislamiento con RLS, los datos existentes entran como tenant n.º 1) y co-construí Edge Functions para el alta del tenant, Stripe Checkout, webhooks de Stripe, cuentas de staff y notificaciones por email. Desarrollador principal de la v1 (53/57 commits); trabajé los hallazgos de QA del cliente.',
   ),
   technologies: ['React 19', 'TypeScript', 'Supabase', 'Stripe', 'PostgreSQL', 'Firebase'],
-  image: fieldServiceImage,
-  imageFallback: fieldServiceImageFallback,
+  image: fieldServiceDashboard,
   imageAlt: text(
-    'Architecture diagram: tenants isolated with Row-Level Security, Edge Functions for sign-up, Stripe and email',
-    'Diagrama de arquitectura: tenants aislados con Row-Level Security, Edge Functions para el alta, Stripe y el email',
+    'Dispatcher dashboard: quotes, active orders, invoices issued vs paid',
+    'Panel del despachador: presupuestos, órdenes activas, facturas emitidas vs cobradas',
   ),
   metrics: text('Lead dev on v1 · 53/57 commits', 'Lead de la v1 · 53/57 commits'),
   caseStudy: {
@@ -83,8 +88,8 @@ export const fieldServiceProject: Project = {
         'Facturación y alta en Supabase Edge Functions:\nregistro del tenant\nsesión de Stripe Checkout y verificación del checkout\nun webhook de Stripe\ncreación y baja de usuarios de staff\nemail transaccional vía Resend (orden nueva, técnico asignado, reprogramado, cancelado, nueva solicitud pública)',
       ),
       text(
-        'Save guard on the invoice form, A4 print layout for quotes and invoices, logos and photos moved to file storage, role-based access for admin, coordinator and technician, and invoice PDFs shareable by WhatsApp link.',
-        'Guarda al guardar el formulario de factura, maquetación de impresión A4 para presupuestos y facturas, logos y fotos movidos a almacenamiento de archivos, acceso por roles para administrador, coordinador y técnico, y PDFs de facturas que se pueden compartir por un enlace de WhatsApp.',
+        'Validation on the invoice form save, A4 print layout for quotes and invoices, logos and photos moved to file storage, role-based access for admin, coordinator and technician, and invoice PDFs shareable by WhatsApp link.',
+        'Validación al guardar el formulario de factura, impresión A4 de presupuestos y facturas, logos y fotos movidos a almacenamiento de archivos, acceso por roles para administrador, coordinador y técnico, y PDFs de facturas que se comparten por un enlace de WhatsApp.',
       ),
     ],
     stack: text(
@@ -127,7 +132,70 @@ export const fieldServiceProject: Project = {
         ),
       },
     ],
+    gallery: [
+      shot(
+        fieldServiceDashboard,
+        'Dispatcher dashboard: quotes, active orders, invoices issued vs paid',
+        'Panel del despachador: presupuestos, órdenes activas, facturas emitidas vs cobradas',
+        2880,
+        1800,
+      ),
+      shot(
+        fieldServiceCalendar,
+        'Technician calendar: week view with appointments by technician',
+        'Calendario de técnicos: vista semanal con turnos por técnico',
+        2880,
+        1800,
+      ),
+      shot(
+        fieldServiceNewOrder,
+        'New service order: customer, address, and a map pin',
+        'Nueva orden de servicio: cliente, dirección y un pin en el mapa',
+        2880,
+        1800,
+      ),
+      shot(
+        fieldServiceQuote,
+        'Quote to invoice: line items, status, and the path to an invoice',
+        'De presupuesto a factura: ítems, estado y el paso a la factura',
+        2880,
+        1800,
+      ),
+      shot(
+        fieldServiceInvoice,
+        'Invoice PDF: Acme Field Services invoice with line items and totals',
+        'PDF de factura: factura de Acme Field Services con ítems y totales',
+        1654,
+        2339,
+      ),
+      shot(
+        fieldServiceSignup,
+        'SaaS sign-up: FieldDesk plan selection for Starter, Pro, and Business',
+        'Registro SaaS: elección de plan de FieldDesk, Starter, Pro y Business',
+        2880,
+        1800,
+      ),
+      shot(
+        fieldServiceMobile,
+        'Technician mobile view: assigned orders, quick actions, and status',
+        'Vista móvil del técnico: órdenes asignadas, acciones rápidas y estado',
+        780,
+        1688,
+      ),
+      shot(
+        fieldServiceArchitecture,
+        'Architecture diagram: tenants isolated with Row-Level Security, Edge Functions for sign-up, Stripe and email',
+        'Diagrama de arquitectura: tenants aislados con Row-Level Security, Edge Functions para el alta, Stripe y el email',
+        1600,
+        1000,
+      ),
+    ],
   },
+}
+
+function shot(src: string, en: string, es: string, width: number, height: number) {
+  const label = text(en, es)
+  return { src, alt: label, caption: label, width, height }
 }
 
 export const frenchErpProject: Project = {

@@ -25,6 +25,8 @@ export interface ProjectImage {
   src: string
   alt: Localized
   caption?: Localized
+  width?: number
+  height?: number
 }
 
 export interface CaseStudy {
