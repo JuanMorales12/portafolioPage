@@ -14,7 +14,8 @@ import miniSaasSignup from '@assets/image/work/minisaas-signup.webp'
 import miniSaasDashboardFree from '@assets/image/work/minisaas-dashboard-free.webp'
 import miniSaasDashboardPro from '@assets/image/work/minisaas-dashboard-pro.webp'
 import fitnessDashboard from '@assets/image/case-studies/fitness-saas.svg'
-import whatsappBookingChat from '@assets/image/case-studies/whatsapp-booking.svg'
+import whatsappBookingChat from '@assets/image/case-studies/whatsapp-booking-agent-architecture.webp'
+import whatsappBookingFallback from '@assets/image/case-studies/whatsapp-booking-agent-architecture.png'
 import opsAgentDiagram from '@assets/image/case-studies/claude-ops-agent-architecture.webp'
 import opsAgentDiagramFallback from '@assets/image/case-studies/claude-ops-agent-architecture.png'
 
@@ -146,9 +147,10 @@ export const projects: Project[] = [
     ),
     technologies: ['Next.js 16', 'Supabase', 'Row-Level Security', 'WhatsApp Cloud API', 'Claude', 'Vitest'],
     image: whatsappBookingChat,
+    imageFallback: whatsappBookingFallback,
     imageAlt: text(
-      'Illustration of a WhatsApp booking conversation and a daily appointments panel',
-      'Ilustración de una conversación de reserva por WhatsApp y un panel de turnos del día',
+      'Architecture diagram: WhatsApp Cloud API to a signed webhook, a Claude agent with booking tools, Supabase with Row-Level Security and a no-double-booking constraint, and staff takeover',
+      'Diagrama de arquitectura: de WhatsApp Cloud API a un webhook firmado, un agente de Claude con herramientas de reservas, Supabase con Row-Level Security y una restricción contra reservas dobles, y traspaso al personal',
     ),
     metrics: text('20 safety-tested conversations', '20 conversaciones probadas en seguridad'),
     caseStudy: {
