@@ -7,6 +7,7 @@ import SpainFlag from './SpainFlag'
 import USAFlag from './USAFlag'
 import SunIcon from './SunIcon'
 import MoonIcon from './MoonIcon'
+import UpworkLink from './UpworkLink'
 
 const SECTION_IDS = ['hero', 'services', 'portfolio', 'testimonials', 'contact']
 
@@ -41,7 +42,7 @@ const Header = () => {
           </button>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center gap-8">
+          <ul className="hidden md:flex items-center gap-5 xl:gap-8">
             {navItems.map((item) => (
               <li key={item.id}>
                 <button
@@ -56,8 +57,8 @@ const Header = () => {
             ))}
           </ul>
 
-          {/* Right side: Theme, Language, Mobile Menu */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 sm:gap-4">
+            <UpworkLink variant="header" />
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
@@ -99,7 +100,8 @@ const Header = () => {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:text-primary transition-colors"
-              aria-label="Toggle menu"
+              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isMenuOpen}
             >
               {isMenuOpen ? (
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -118,6 +120,9 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-gray-200 dark:border-gray-700 pt-4">
             <ul className="flex flex-col gap-4">
+              <li>
+                <UpworkLink variant="primary" className="w-full" />
+              </li>
               {navItems.map((item) => (
                 <li key={item.id}>
                   <button
