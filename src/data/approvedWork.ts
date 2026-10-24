@@ -19,8 +19,8 @@ export const fieldServiceProject: Project = {
   order: 1,
   title: 'Field-Service ERP → Multi-tenant SaaS (Supabase + Stripe)',
   description: text(
-    'Field-service ERP for a Dominican Republic repair company, later rebuilt as a multi-tenant SaaS. The ops app covers service orders, technician calendars, customer history and maps, a public booking form, quotes → invoices → payments as PDFs, inventory and payroll. For the SaaS I wrote the Supabase multi-tenant migration (tenants, RLS isolation, existing data moved in as tenant #1) and co-built Edge Functions for tenant sign-up, Stripe Checkout, Stripe webhooks, staff accounts and email notifications. Lead dev on v1 (53/57 commits); fixed the client\'s QA findings.',
-    'ERP de servicios de campo para una empresa de reparaciones en República Dominicana, después reconstruido como SaaS multi-tenant. La app de operaciones cubre órdenes de servicio, calendarios de técnicos, historial y mapas de clientes, un formulario público de reservas, presupuestos → facturas → pagos en PDF, inventario y nómina. Para el SaaS escribí la migración multi-tenant en Supabase (tenants, aislamiento con RLS, los datos existentes entran como tenant n.º 1) y co-construí Edge Functions para el alta del tenant, Stripe Checkout, webhooks de Stripe, cuentas de staff y notificaciones por email. Desarrollador principal de la v1 (53/57 commits); corregí los hallazgos de QA del cliente.',
+    'Field-service ERP for a Dominican Republic repair company, later rebuilt as a multi-tenant SaaS. The ops app covers service orders, technician calendars, customer history and maps, a public booking form, quotes → invoices → payments as PDFs, inventory and payroll. For the SaaS I wrote the Supabase multi-tenant migration (tenants, RLS isolation, existing data moved in as tenant #1) and co-built Edge Functions for tenant sign-up, Stripe Checkout, Stripe webhooks, staff accounts and email notifications. Lead dev on v1 (53/57 commits); worked through the client\'s QA findings.',
+    'ERP de servicios de campo para una empresa de reparaciones en República Dominicana, después reconstruido como SaaS multi-tenant. La app de operaciones cubre órdenes de servicio, calendarios de técnicos, historial y mapas de clientes, un formulario público de reservas, presupuestos → facturas → pagos en PDF, inventario y nómina. Para el SaaS escribí la migración multi-tenant en Supabase (tenants, aislamiento con RLS, los datos existentes entran como tenant n.º 1) y co-construí Edge Functions para el alta del tenant, Stripe Checkout, webhooks de Stripe, cuentas de staff y notificaciones por email. Desarrollador principal de la v1 (53/57 commits); trabajé los hallazgos de QA del cliente.',
   ),
   technologies: ['React 19', 'TypeScript', 'Supabase', 'Stripe', 'PostgreSQL', 'Firebase'],
   image: fieldServiceImage,
@@ -83,8 +83,8 @@ export const fieldServiceProject: Project = {
         'Facturación y alta en Supabase Edge Functions:\nregistro del tenant\nsesión de Stripe Checkout y verificación del checkout\nun webhook de Stripe\ncreación y baja de usuarios de staff\nemail transaccional vía Resend (orden nueva, técnico asignado, reprogramado, cancelado, nueva solicitud pública)',
       ),
       text(
-        'Production hardening from QA: double-submit protection on quote → invoice conversion, print CSS so pages don\'t break mid-table, and logos moved from Firestore to file storage.',
-        'Endurecimiento de producción a partir de QA: protección contra doble envío en la conversión de presupuesto → factura, CSS de impresión para que las páginas no se corten a mitad de una tabla, y logos movidos de Firestore a almacenamiento de archivos.',
+        'Save guard on the invoice form, A4 print layout for quotes and invoices, logos and photos moved to file storage, role-based access for admin, coordinator and technician, and invoice PDFs shareable by WhatsApp link.',
+        'Guarda al guardar el formulario de factura, maquetación de impresión A4 para presupuestos y facturas, logos y fotos movidos a almacenamiento de archivos, acceso por roles para administrador, coordinador y técnico, y PDFs de facturas que se pueden compartir por un enlace de WhatsApp.',
       ),
     ],
     stack: text(
@@ -112,8 +112,8 @@ export const fieldServiceProject: Project = {
       {
         headline: text('Formal QA rounds', 'Rondas formales de QA'),
         detail: text(
-          'Worked through the client\'s formal QA rounds and fixed critical bugs, including duplicate invoices and broken printouts.',
-          'Trabajó las rondas formales de QA del cliente y corrigió bugs críticos, incluidas facturas duplicadas e impresiones rotas.',
+          'Worked through the client\'s formal QA rounds, including duplicate invoices and cut-off printouts.',
+          'Trabajó las rondas formales de QA del cliente, incluidas facturas duplicadas e impresiones cortadas.',
         ),
       },
       {
