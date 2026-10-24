@@ -8,7 +8,14 @@ import fieldServiceInvoice from '@assets/image/case-studies/field-service/field-
 import fieldServiceSignup from '@assets/image/case-studies/field-service/field-service-signup-plans.webp'
 import fieldServiceMobile from '@assets/image/case-studies/field-service/field-service-technician-mobile.webp'
 import fieldServiceArchitecture from '@assets/image/case-studies/field-service-saas-architecture.webp'
-import frenchErpImage from '@assets/image/case-studies/french-construction-erp.svg'
+import constructionExtracted from '@assets/image/case-studies/construction-erp/construction-erp-import-extracted-lines.webp'
+import constructionUpload from '@assets/image/case-studies/construction-erp/construction-erp-pdf-import-upload.webp'
+import constructionCustomer from '@assets/image/case-studies/construction-erp/construction-erp-import-customer-match.webp'
+import constructionValidate from '@assets/image/case-studies/construction-erp/construction-erp-import-validate.webp'
+import constructionQuoteDetail from '@assets/image/case-studies/construction-erp/construction-erp-quote-detail.webp'
+import constructionQuotesList from '@assets/image/case-studies/construction-erp/construction-erp-quotes-list.webp'
+import constructionPlanning from '@assets/image/case-studies/construction-erp/construction-erp-purchase-planning.webp'
+import constructionArchitecture from '@assets/image/case-studies/construction-erp/construction-erp-ai-quote-import.webp'
 import insuranceProduct from '@assets/image/work/insurance-product-select.webp'
 import insurancePlans from '@assets/image/work/insurance-plans-coverages.webp'
 import insuranceConfirmation from '@assets/image/work/insurance-quote-confirmation.webp'
@@ -210,10 +217,10 @@ export const frenchErpProject: Project = {
     'Para un estudio de software francés que construye ERPs modulares para pymes de construcción y oficios, implementé la importación de presupuestos en PDF con OpenAI: se sube un PDF, se extraen líneas estructuradas, se matchea o se crea el cliente de forma semi-automática, y después se revisa y se valida. También armé pipelines CSV hacia la planificación de compras y las hojas de horas, proyectos con varios presupuestos, y componentes de UI compartidos, y conecté un agente orquestador de OpenAI + Chroma en un planner interno. Stack: NestJS, GraphQL, TypeORM, Nuxt 4, Nuxt UI, i18n EN/FR. Contribuidor n.º 2 del módulo de presupuestos (72 commits).',
   ),
   technologies: ['NestJS', 'GraphQL', 'Nuxt 4', 'OpenAI', 'TypeORM', 'Vue 3'],
-  image: frenchErpImage,
+  image: constructionExtracted,
   imageAlt: text(
-    'Diagram of a quote PDF moving through extraction into planning modules',
-    'Diagrama de un PDF de presupuesto que pasa por la extracción hacia módulos de planificación',
+    'Lines extracted with OpenAI, ready to review',
+    'Líneas extraídas con OpenAI, listas para revisar',
   ),
   metrics: text('#2 on the quotes module · 72 commits', 'N.º 2 en presupuestos · 72 commits'),
   caseStudy: {
@@ -300,6 +307,64 @@ export const frenchErpProject: Project = {
           'Hizo las funcionalidades reutilizables entre clientes: movió la funcionalidad de precio de costo a su propio módulo y unificó UI duplicada en componentes compartidos.',
         ),
       },
+    ],
+    gallery: [
+      shot(
+        constructionUpload,
+        'Upload a supplier or customer quote PDF',
+        'Subir el PDF de un presupuesto',
+        2880,
+        1120,
+      ),
+      shot(
+        constructionExtracted,
+        'Lines extracted with OpenAI, ready to review',
+        'Líneas extraídas con OpenAI, listas para revisar',
+        2880,
+        1800,
+      ),
+      shot(
+        constructionCustomer,
+        'Suggested customer match',
+        'Cliente sugerido',
+        2880,
+        1120,
+      ),
+      shot(
+        constructionValidate,
+        'Review and validate before saving',
+        'Revisar y validar antes de guardar',
+        2880,
+        1240,
+      ),
+      shot(
+        constructionQuoteDetail,
+        'Quote detail',
+        'Detalle del presupuesto',
+        2880,
+        1800,
+      ),
+      shot(
+        constructionQuotesList,
+        'Quotes list',
+        'Listado de presupuestos',
+        2880,
+        1800,
+      ),
+      shot(
+        constructionPlanning,
+        'Purchase planning fed from quote lines',
+        'Planificación de compras alimentada desde el presupuesto',
+        2880,
+        1040,
+      ),
+      shot(
+        constructionArchitecture,
+        'Architecture: PDF to OpenAI extraction, review, GraphQL and planning modules',
+        'Arquitectura: del PDF a la extracción con OpenAI, revisión, GraphQL y módulos de planificación',
+        1600,
+        1000,
+      ),
     ],
   },
 }
